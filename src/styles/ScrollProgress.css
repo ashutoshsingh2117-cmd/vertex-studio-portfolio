@@ -1,0 +1,52 @@
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 999999;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    #8B6914,
+    #D4AF37,
+    #FFD700,
+    #FFF3B0,
+    #FFD700,
+    #D4AF37
+  );
+  background-size: 300% 100%;
+  animation: progressGlow 4s linear infinite;
+  border-radius: 0 10px 10px 0;
+  transition: width .15s linear;
+  box-shadow:
+    0 0 10px rgba(212,175,55,.4),
+    0 0 20px rgba(212,175,55,.35),
+    0 0 35px rgba(212,175,55,.2);
+}
+
+@keyframes progressGlow {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+
+}
+
+@media (max-width:768px){
+
+.progress-container{
+height:4px;
+}
+
+}

@@ -1,0 +1,84 @@
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: #D4AF37;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px rgba(212,175,55,.9),
+    0 0 25px rgba(212,175,55,.6),
+    0 0 45px rgba(212,175,55,.3);
+}
+
+.cursor-ring {
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(212,175,55,.8);
+  border-radius: 50%;
+  transition:
+    width .25s ease,
+    height .25s ease,
+    border-color .25s ease,
+    background .25s ease,
+    transform .08s linear;
+  box-shadow:
+    0 0 20px rgba(212,175,55,.25),
+    inset 0 0 12px rgba(212,175,55,.12);
+}
+
+.cursor-ring.cursor-hover {
+  width: 65px;
+  height: 65px;
+  background: rgba(212,175,55,.08);
+  border-color: #FFD700;
+  box-shadow:
+    0 0 25px rgba(212,175,55,.45),
+    0 0 60px rgba(212,175,55,.25);
+}
+
+body {
+  cursor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+.gallery-card,
+.project-card,
+.service-card,
+.contact-card,
+.testimonial-card {
+  cursor: none;
+}
+
+@media (max-width: 992px) {
+
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: auto;
+  }
+
+}

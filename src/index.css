@@ -1,0 +1,54 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#0B0B0B;
+  color:white;
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+#root{
+  width:100%;
+  min-height:100vh;
+}
+
+section{
+  scroll-margin-top:90px;
+}
+
+::selection{
+  background:#FFD700;
+  color:#000;
+}
+
+h1,
+h2,
+h3{
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+}
+
+button,
+a{
+  font-family:inherit;
+}
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#080808;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#FFD700;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#ffffff;
+}
