@@ -11,15 +11,14 @@ import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
-import CustomCursor from "./components/CustomCursor";
 import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
     <>
       <Loader />
-      <CustomCursor />
       <ScrollProgress />
+
       <Navbar />
       <Hero />
       <About />

@@ -1,127 +1,201 @@
 import "../styles/Contact.css";
 
 function Contact() {
-  const contacts = [
+  const contactInfo = [
     {
-      icon: "📧",
+      icon: "✉",
       title: "Email",
       value: "vertexstudio.business@gmail.com",
+      link: "mailto:vertexstudio.business@gmail.com",
     },
     {
-      icon: "📱",
+      icon: "☎",
       title: "Phone",
       value: "+91 XXXXX XXXXX",
+      link: "tel:+91XXXXXXXXXX",
     },
     {
-      icon: "📍",
+      icon: "⌂",
       title: "Location",
       value: "Jaipur, Rajasthan",
+      link: "#",
     },
   ];
 
   return (
     <section className="contact" id="contact">
-      <div className="contact-glow contact-glow-1"></div>
-      <div className="contact-glow contact-glow-2"></div>
 
-      <div className="contact-wrapper">
+      <div className="contact-bg"></div>
+      <div className="contact-glow glow-one"></div>
+      <div className="contact-glow glow-two"></div>
+
+      <div className="contact-container">
+
+        {/* LEFT SIDE */}
 
         <div className="contact-left">
 
-          <span className="contact-badge">
-            CONTACT US
+          <span className="contact-tag">
+            LET'S CONNECT
           </span>
 
           <h2>
-            Let's Build
+            Let's Create
             <br />
             Something
-            <span> Extraordinary.</span>
+            <span> Exceptional.</span>
           </h2>
 
-          <p>
-            We design premium websites, luxury brands and
-            modern digital experiences that help businesses
-            stand out from the competition.
+          <p className="contact-description">
+            We build premium websites and modern digital
+            experiences that help brands stand out with
+            elegance, performance and creativity.
           </p>
 
-          <div className="contact-cards">
+          <div className="contact-info">
 
-            {contacts.map((item, index) => (
+            {contactInfo.map((item, index) => (
 
-              <div
+              <a
+                href={item.link}
                 key={index}
-                className="contact-card"
+                className="info-card"
               >
 
-                <div className="card-icon">
+                <div className="info-icon">
                   {item.icon}
                 </div>
 
-                <div>
+                <div className="info-text">
 
-                  <h3>{item.title}</h3>
+                  <small>
+                    {item.title}
+                  </small>
 
-                  <span>{item.value}</span>
+                  <h4>
+                    {item.value}
+                  </h4>
 
                 </div>
 
-              </div>
+              </a>
 
             ))}
 
           </div>
 
-          <div className="social-links">
+          <div className="contact-social">
 
-            <a href="#">Instagram</a>
+            <a href="#">
+              Instagram
+            </a>
 
-            <a href="#">LinkedIn</a>
+            <a href="#">
+              GitHub
+            </a>
 
-            <a href="#">GitHub</a>
+            <a href="#">
+              LinkedIn
+            </a>
 
           </div>
 
         </div>
 
+        {/* RIGHT SIDE */}
+
         <div className="contact-right">
 
-          <form className="contact-form">
+          <div className="form-card">
 
-            <div className="input-group">
+            <div className="form-top">
 
-              <input
-                type="text"
-                placeholder="Your Name"
-              />
+              <h3>
+                Start Your Project
+              </h3>
 
-              <input
-                type="email"
-                placeholder="Email Address"
-              />
+              <p>
+                Fill in the details and let's turn your
+                vision into reality.
+              </p>
 
             </div>
 
-            <input
-              type="text"
-              placeholder="Business / Company"
-            />
+            <form className="contact-form">
 
-            <input
-              type="text"
-              placeholder="Project Budget"
-            />
+              <div className="double-input">
 
-            <textarea
-              rows="7"
-              placeholder="Tell us about your dream project..."
-            ></textarea>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                />
 
-            <button>
-              Send Message →
-            </button>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                />
 
-          </form>
+              </div>
+
+              <input
+                type="text"
+                placeholder="Company / Brand"
+              />
+              <input
+                type="text"
+                placeholder="Estimated Budget"
+              />
+
+              <textarea
+                rows="6"
+                placeholder="Tell us about your project..."
+              ></textarea>
+
+              <button
+                type="submit"
+                className="contact-btn"
+              >
+                <span>Send Message</span>
+
+                <div className="btn-circle">
+                  →
+                </div>
+
+              </button>
+
+            </form>
+
+            <div className="form-footer">
+
+              <div className="footer-item">
+
+                <h4>
+                  Fast Response
+                </h4>
+
+                <span>
+                  Usually within 24 hours
+                </span>
+
+              </div>
+
+              <div className="footer-divider"></div>
+
+              <div className="footer-item">
+
+                <h4>
+                  Premium Quality
+                </h4>
+
+                <span>
+                  Modern • Luxury • Responsive
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
