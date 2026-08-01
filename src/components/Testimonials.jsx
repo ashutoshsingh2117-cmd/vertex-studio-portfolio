@@ -3,119 +3,159 @@ import "../styles/Testimonials.css";
 function Testimonials() {
 
   const testimonials = [
+
     {
       name: "Arjun Sharma",
       role: "Business Owner",
       review:
-        "Vertex Studio transformed our vision into a premium digital experience. The design quality and attention to detail were outstanding.",
+        "Vertex Studio completely transformed our online presence. The quality, creativity and attention to detail exceeded every expectation.",
+      heart: "❤",
     },
+
     {
       name: "Priya Mehta",
       role: "Startup Founder",
       review:
-        "Amazing creativity and modern approach. The final website looked elegant, fast and exactly matched our brand identity.",
+        "Working with Vertex Studio was an amazing experience. Every pixel felt premium and every interaction reflected true professionalism.",
+      featured: true,
+      heart: "❤",
     },
+
     {
       name: "Rahul Verma",
       role: "Creative Director",
       review:
-        "A perfect combination of design and technology. The experience was smooth and the results exceeded expectations.",
+        "Exceptional creativity, smooth communication and flawless execution. Vertex Studio delivered something truly memorable.",
+      heart: "❤",
     },
+
   ];
 
-
   return (
-    <section className="testimonials" id="testimonials">
 
-      <div className="testimonial-glow"></div>
+    <section
+      id="testimonials"
+      className="testimonials"
+    >
 
+      <div className="bg-light one"></div>
+      <div className="bg-light two"></div>
+
+      <div className="floating-heart h1">❤</div>
+      <div className="floating-heart h2">❤</div>
+      <div className="floating-heart h3">❤</div>
 
       <div className="testimonial-container">
-
 
         <div className="testimonial-header">
 
           <span className="testimonial-badge">
-            TESTIMONIALS
+
+            CLIENT LOVE
+
           </span>
 
-
           <h2>
-            What Our <span>Clients Say</span>
+
+            Loved By
+
+            <span> Our Clients</span>
+
           </h2>
 
-
           <p>
-            Real experiences from people who trusted
-            Vertex Studio for their digital journey.
+
+            Every project is crafted with passion,
+            creativity and attention to detail.
+            Our clients don't just receive a website —
+            they receive an unforgettable experience.
+
           </p>
 
         </div>
 
-
-
         <div className="testimonial-grid">
-
 
           {testimonials.map((item,index)=>(
 
             <div
-              className="testimonial-card"
+
               key={index}
+
+              className={`testimonial-card ${item.featured ? "featured" : ""}`}
+
             >
 
+              <div className="glass-light"></div>
 
               <div className="quote">
-                "
+
+                ❤
+
               </div>
 
+              <div className="stars">
+
+                ★★★★★
+
+              </div>
 
               <p className="review">
-                {item.review}
-              </p>
 
+                {item.review}
+
+              </p>
 
               <div className="client">
 
                 <div className="avatar">
+
                   {item.name.charAt(0)}
+
                 </div>
 
-
-                <div>
+                <div className="client-info">
 
                   <h4>
+
                     {item.name}
+
+                    <span className="heart">
+
+                      {item.heart}
+
+                    </span>
+
                   </h4>
 
-                  <span>
+                  <p>
+
                     {item.role}
-                  </span>
+
+                  </p>
 
                 </div>
 
               </div>
 
+              <div className="love-text">
 
-              <div className="stars">
-                ★★★★★
+                Crafted With Passion ❤
+
               </div>
-
 
             </div>
 
           ))}
 
-
         </div>
-
 
       </div>
 
-
     </section>
-  );
-}
 
+  );
+
+}
 
 export default Testimonials;

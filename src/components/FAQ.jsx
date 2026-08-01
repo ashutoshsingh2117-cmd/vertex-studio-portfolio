@@ -2,151 +2,142 @@ import { useState } from "react";
 import "../styles/FAQ.css";
 
 function FAQ() {
-
   const [active, setActive] = useState(0);
 
   const faqs = [
     {
-      number: "01",
       question: "How do we start a project?",
       answer:
-        "We begin by understanding your vision, goals and requirements. After planning the strategy, we move into design, development and final launch."
+        "We begin with a discussion to understand your goals, brand and vision. After planning the strategy, we move into design, development and final launch.",
     },
     {
-      number: "02",
       question: "What makes Vertex Studio different?",
       answer:
-        "We focus on creating premium digital experiences that combine modern design, smooth interactions and powerful technology."
+        "We focus on premium UI, luxury branding, smooth animations and high-performance websites that help businesses stand out from the competition.",
     },
     {
-      number: "03",
       question: "Do you create custom designs?",
       answer:
-        "Yes, every project is uniquely designed according to your brand identity and audience. No templates, only custom experiences."
+        "Yes. Every website is designed from scratch according to your business, ensuring a unique identity instead of using generic templates.",
     },
     {
-      number: "04",
       question: "How long does a project take?",
       answer:
-        "The timeline depends on project requirements. We focus on delivering high-quality results with proper attention to every detail."
+        "Most websites are completed within 7–21 days depending on the project size, features and revisions.",
     },
     {
-      number: "05",
       question: "Do you provide support after launch?",
       answer:
-        "Yes, we provide maintenance and support to keep your website updated, secure and performing smoothly."
-    }
+        "Absolutely. We provide maintenance, updates and technical support even after your website goes live.",
+    },
   ];
 
+  const toggleFAQ = (index) => {
+    setActive(active === index ? null : index);
+  };
 
   return (
+    <section id="faq" className="faq">
 
-    <section className="luxury-faq" id="faq">
+      {/* Background Effects */}
 
-      <div className="faq-bg-glow"></div>
+      <div className="faq-red-light left"></div>
+      <div className="faq-red-light right"></div>
 
+      <div className="faq-particle p1"></div>
+      <div className="faq-particle p2"></div>
+      <div className="faq-particle p3"></div>
 
-      <div className="luxury-faq-container">
+      <div className="faq-container">
 
+        {/* Left Side */}
 
         <div className="faq-left">
 
-          <span className="faq-tag">
+          <span className="faq-badge">
             FAQ
           </span>
-
 
           <h2>
             Questions?
             <br />
-            <span>
-              We have answers.
-            </span>
+            <span>We Have Answers.</span>
           </h2>
 
-
           <p>
-            Everything you need to know about our
-            design process, development workflow
-            and creative solutions.
+            Everything you need to know about our design,
+            development and creative workflow.
+            Clear answers. Premium experience.
           </p>
-
 
           <div className="faq-line"></div>
 
         </div>
 
-
+        {/* Right Side */}
 
         <div className="faq-right">
 
-
-          {faqs.map((item,index)=>(
+          {faqs.map((item, index) => (
 
             <div
-              className={`luxury-card ${
+              key={index}
+              className={`faq-card ${
                 active === index ? "active" : ""
               }`}
-              key={index}
             >
 
-
               <button
-                onClick={() =>
-                  setActive(
-                    active === index ? null : index
-                  )
-                }
+                className="faq-question"
+                onClick={() => toggleFAQ(index)}
               >
 
+                <div className="faq-number">
 
-                <div className="faq-question-box">
-
-                  <span className="faq-number">
-                    {item.number}
-                  </span>
-
-
-                  <span>
-                    {item.question}
-                  </span>
+                  {(index + 1)
+                    .toString()
+                    .padStart(2, "0")}
 
                 </div>
 
+                <h3>
+                  {item.question}
+                </h3>
 
-                <span className="faq-arrow">
-                  →
+                <span className="faq-icon">
+
+                  {active === index ? "−" : "+"}
+
                 </span>
-
 
               </button>
 
-
-
-              <div className="luxury-answer">
+              <div
+                className={`faq-answer ${
+                  active === index
+                    ? "show"
+                    : ""
+                }`}
+              >
 
                 <p>
+
                   {item.answer}
+
                 </p>
 
               </div>
-
 
             </div>
 
           ))}
 
-
         </div>
-
 
       </div>
 
-
     </section>
-
   );
 }
-
 
 export default FAQ;

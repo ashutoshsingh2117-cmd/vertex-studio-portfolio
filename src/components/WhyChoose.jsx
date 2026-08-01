@@ -1,174 +1,157 @@
+import "../styles/WhyChoose.css";
+import { useState } from "react";
+
+const features = [
+  {
+    title: "Creative Design",
+    description:
+      "Luxury interfaces crafted with modern UI, premium branding and pixel-perfect attention to every detail.",
+  },
+  {
+    title: "Lightning Fast",
+    description:
+      "Blazing-fast websites optimized for performance, smooth animations and seamless user experience.",
+  },
+  {
+    title: "Responsive Experience",
+    description:
+      "Every website adapts perfectly across desktop, tablet and mobile with flawless responsiveness.",
+  },
+  {
+    title: "Trusted Support",
+    description:
+      "Long-term support, regular improvements and reliable maintenance for complete peace of mind.",
+  },
+];
+
 function WhyChoose() {
 
-  const reasons = [
-    {
-      title:"Creative Design",
-      description:
-      "Unique premium designs that make your brand different from competitors.",
-    },
+  const [active, setActive] = useState(null);
 
-    {
-      title:"Fast Delivery",
-      description:
-      "Quality projects delivered quickly without compromising performance.",
-    },
-
-    {
-      title:"Responsive Design",
-      description:
-      "Websites that look perfect on mobile, tablet and desktop.",
-    },
-
-    {
-      title:"Premium Support",
-      description:
-      "Long-term support and assistance even after project completion.",
-    },
-  ];
-
+  const handleToggle = (index) => {
+    setActive(active === index ? null : index);
+  };
 
   return (
 
     <section
-
-      style={{
-        background:"#0B0B0B",
-        color:"white",
-        padding:"100px 40px",
-      }}
-
+      id="why"
+      className="why-section"
     >
 
+      <div className="why-grid">
 
-      <h2
+        <div className="why-left">
 
-        style={{
-          textAlign:"center",
-          color:"#FFD700",
-          fontSize:"48px",
-          marginBottom:"20px",
-        }}
+          <span className="why-badge">
+            WHY VERTEX
+          </span>
 
-      >
-        Why Choose Vertex Studio?
-      </h2>
+          <h2>
 
+            Why Choose{" "}
 
+            <span className="vertex-highlight">
 
-      <p
+              Vertex
 
-        style={{
-          textAlign:"center",
-          color:"#aaa",
-          fontSize:"18px",
-          marginBottom:"60px",
-        }}
+            </span>{" "}
 
-      >
-        We create digital experiences that help brands stand out.
-      </p>
+            Studio?
 
+          </h2>
 
+          <p>
 
+            We build luxury digital experiences
+            that combine premium design,
+            cutting-edge technology and
+            flawless performance.
 
-      <div
-
-        style={{
-          display:"grid",
-          gridTemplateColumns:
-          "repeat(auto-fit,minmax(260px,1fr))",
-          gap:"35px",
-          maxWidth:"1200px",
-          margin:"auto",
-        }}
-
-      >
-
-
-
-      {reasons.map((item,index)=>(
-
-
-        <div
-
-          key={index}
-
-          style={{
-            background:"rgba(255,255,255,0.05)",
-            padding:"35px",
-            borderRadius:"25px",
-            border:
-            "1px solid rgba(255,215,0,0.2)",
-            transition:"0.4s",
-            cursor:"pointer",
-          }}
-
-
-          onMouseEnter={(e)=>{
-
-            e.currentTarget.style.transform=
-            "translateY(-12px)";
-
-            e.currentTarget.style.boxShadow=
-            "0 0 40px rgba(255,215,0,0.3)";
-
-          }}
-
-
-          onMouseLeave={(e)=>{
-
-            e.currentTarget.style.transform=
-            "translateY(0)";
-
-            e.currentTarget.style.boxShadow=
-            "none";
-
-          }}
-
-        >
-
-
-          <h3
-
-            style={{
-              color:"#FFD700",
-              fontSize:"24px",
-              marginBottom:"15px",
-            }}
-
-          >
-            {item.title}
-          </h3>
-
-
-
-          <p
-
-            style={{
-              color:"#ccc",
-              lineHeight:"1.8",
-            }}
-
-          >
-            {item.description}
           </p>
-
-
 
         </div>
 
+        <div className="why-right">
 
-      ))}
+          {
 
+            features.map((item,index)=>(
+
+              <div
+
+                key={index}
+
+                className={`why-card ${
+                  active===index ? "active" : ""
+                }`}
+
+                onClick={() => handleToggle(index)}
+
+              >
+
+                {/* Premium Shine */}
+
+                <div className="shine"></div>
+
+                <div className="why-card-top">
+
+                  <h3>
+
+                    {item.title}
+
+                  </h3>
+
+                  <div className="why-icon">
+
+                    {
+
+                      active===index
+
+                      ?
+
+                      "−"
+
+                      :
+
+                      "+"
+
+                    }
+
+                  </div>
+
+                </div>
+
+                <div
+
+                  className={`why-content ${
+                    active===index ? "open" : ""
+                  }`}
+
+                >
+
+                  <p>
+
+                    {item.description}
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            ))
+
+          }
+
+        </div>
 
       </div>
-
 
     </section>
 
   );
 
 }
-
 
 export default WhyChoose;

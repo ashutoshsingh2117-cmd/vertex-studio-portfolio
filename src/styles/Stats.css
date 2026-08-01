@@ -1,0 +1,860 @@
+.stats{
+
+position:relative;
+
+padding:120px 6%;
+
+background:#050505;
+
+overflow:hidden;
+
+isolation:isolate;
+
+}
+
+/* ==========================
+   Premium Background
+========================== */
+
+.stats::before{
+
+content:"";
+
+position:absolute;
+
+top:8%;
+
+left:8%;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:#00FF88;
+
+box-shadow:
+
+0 0 8px #00FF88,
+
+0 0 18px #00FF88,
+
+0 0 35px rgba(0,255,136,.95);
+
+animation:dotOne 13s ease-in-out infinite;
+
+z-index:0;
+
+}
+
+.stats::after{
+
+content:"";
+
+position:absolute;
+
+right:9%;
+
+bottom:12%;
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#00FF88;
+
+box-shadow:
+
+0 0 8px #00FF88,
+
+0 0 18px #00FF88,
+
+0 0 35px rgba(0,255,136,.95);
+
+animation:dotTwo 16s ease-in-out infinite;
+
+z-index:0;
+
+}
+
+/* ==========================
+   Green Grid
+========================== */
+
+.red-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(0,255,136,.025) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(0,255,136,.025) 1px,transparent 1px);
+
+background-size:60px 60px;
+
+mask-image:linear-gradient(
+to bottom,
+transparent,
+#000 10%,
+#000 90%,
+transparent
+);
+
+opacity:.30;
+
+pointer-events:none;
+
+}
+
+/* ==========================
+   Premium Ambient Glow
+========================== */
+
+.red-blur{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(190px);
+
+pointer-events:none;
+
+animation:luxuryGlow 10s ease-in-out infinite;
+
+}
+
+.blur-one{
+
+width:520px;
+
+height:520px;
+
+left:-220px;
+
+top:-180px;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(0,255,136,.10),
+
+rgba(212,175,55,.05),
+
+transparent 72%
+
+);
+
+}
+
+.blur-two{
+
+width:500px;
+
+height:500px;
+
+right:-220px;
+
+bottom:-220px;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(212,175,55,.08),
+
+rgba(0,255,136,.05),
+
+transparent 72%
+
+);
+
+animation-delay:2s;
+
+}
+
+@keyframes luxuryGlow{
+
+0%,100%{
+
+transform:translateY(0);
+
+opacity:.75;
+
+}
+
+50%{
+
+transform:translateY(25px);
+
+opacity:1;
+
+}
+
+}
+
+.stats-wrapper{
+
+position:relative;
+
+z-index:2;
+
+max-width:1380px;
+
+margin:auto;
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:34px;
+
+align-items:stretch;
+
+}
+/* ==========================
+   Premium Card
+========================== */
+
+.stats-card{
+
+position:relative;
+
+overflow:hidden;
+
+padding:48px 34px;
+
+min-height:330px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+border-radius:32px;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(18,18,18,.97),
+
+rgba(8,8,8,.99)
+
+);
+
+border:1px solid rgba(0,255,136,.12);
+
+backdrop-filter:blur(24px);
+
+-webkit-backdrop-filter:blur(24px);
+
+cursor:pointer;
+
+transition:
+
+transform .45s ease,
+
+border-color .45s ease,
+
+box-shadow .45s ease;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.45);
+
+}
+
+/* Premium Glow */
+
+.stats-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(
+
+circle at top left,
+
+rgba(0,255,136,.12),
+
+rgba(212,175,55,.08),
+
+transparent 72%
+
+);
+
+opacity:0;
+
+transition:.45s;
+
+pointer-events:none;
+
+}
+
+/* Shine */
+
+.stats-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-45%;
+
+width:65%;
+
+height:260%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.08),
+
+rgba(0,255,136,.08),
+
+rgba(212,175,55,.10),
+
+transparent
+
+);
+
+transform:rotate(24deg);
+
+transition:1s;
+
+pointer-events:none;
+
+}
+
+.stats-card:hover::before{
+
+opacity:1;
+
+}
+
+.stats-card:hover::after{
+
+left:145%;
+
+}
+
+.stats-card:hover{
+
+transform:
+
+translateY(-12px)
+
+scale(1.02);
+
+border-color:rgba(212,175,55,.28);
+
+box-shadow:
+
+0 28px 65px rgba(0,0,0,.60),
+
+0 0 20px rgba(0,255,136,.16),
+
+0 0 34px rgba(212,175,55,.12);
+
+}
+/* ==========================
+   Premium Icon
+========================== */
+
+.stats-icon{
+
+position:relative;
+
+width:84px;
+
+height:84px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin-bottom:30px;
+
+border-radius:24px;
+
+font-size:34px;
+
+color:#00FF88;
+
+background:rgba(0,255,136,.06);
+
+border:1px solid rgba(0,255,136,.15);
+
+transition:all .45s cubic-bezier(.22,1,.36,1);
+
+box-shadow:
+
+0 0 16px rgba(0,255,136,.10);
+
+}
+
+.stats-card:hover .stats-icon{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#00FF88,
+
+#D4AF37
+
+);
+
+color:#050505;
+
+border-color:#D4AF37;
+
+transform:
+
+rotate(-6deg)
+
+scale(1.08);
+
+box-shadow:
+
+0 0 20px rgba(0,255,136,.20),
+
+0 0 35px rgba(212,175,55,.18);
+
+}
+
+/* ==========================
+   Text
+========================== */
+
+.stats-card h2{
+
+font-size:44px;
+
+font-weight:800;
+
+margin-bottom:14px;
+
+letter-spacing:.5px;
+
+background:linear-gradient(
+
+135deg,
+
+#00FF88,
+
+#79FFBF,
+
+#D4AF37
+
+);
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.stats-card p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#D5D5D5;
+
+}
+
+/* ==========================
+   Bottom Line
+========================== */
+
+.stats-line{
+
+margin-top:28px;
+
+width:60px;
+
+height:3px;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#00FF88,
+
+#D4AF37,
+
+#00FF88
+
+);
+
+transition:.45s;
+
+box-shadow:
+
+0 0 12px rgba(0,255,136,.15);
+
+}
+
+.stats-card:hover .stats-line{
+
+width:120px;
+
+box-shadow:
+
+0 0 18px rgba(0,255,136,.25),
+
+0 0 28px rgba(212,175,55,.15);
+
+}
+
+/* ==========================
+   Entrance Animation
+========================== */
+
+.stats-card{
+
+animation:statsReveal .8s ease both;
+
+}
+
+.stats-card:nth-child(2){
+
+animation-delay:.12s;
+
+}
+
+.stats-card:nth-child(3){
+
+animation-delay:.24s;
+
+}
+
+.stats-card:nth-child(4){
+
+animation-delay:.36s;
+
+}
+
+@keyframes statsReveal{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* ==========================
+   Floating Animation
+========================== */
+
+.stats::before{
+
+animation:
+
+dotOne 13s ease-in-out infinite,
+
+dotGlow 4s ease-in-out infinite;
+
+}
+
+.stats::after{
+
+animation:
+
+dotTwo 16s ease-in-out infinite,
+
+dotGlow 5s ease-in-out infinite;
+
+animation-delay:1s;
+
+}
+
+@keyframes dotOne{
+
+0%,100%{
+
+transform:translate(0,0);
+
+opacity:.65;
+
+}
+
+25%{
+
+transform:translate(18px,-16px);
+
+}
+
+50%{
+
+transform:translate(8px,20px);
+
+opacity:1;
+
+}
+
+75%{
+
+transform:translate(-15px,-10px);
+
+}
+
+}
+
+@keyframes dotTwo{
+
+0%,100%{
+
+transform:translate(0,0);
+
+opacity:.65;
+
+}
+
+25%{
+
+transform:translate(-18px,15px);
+
+}
+
+50%{
+
+transform:translate(15px,-18px);
+
+opacity:1;
+
+}
+
+75%{
+
+transform:translate(-10px,-12px);
+
+}
+
+}
+
+@keyframes dotGlow{
+
+0%,100%{
+
+box-shadow:
+
+0 0 8px #00FF88,
+
+0 0 18px rgba(0,255,136,.8);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 12px #00FF88,
+
+0 0 28px rgba(0,255,136,1),
+
+0 0 45px rgba(0,255,136,.7);
+
+}
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:1100px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:24px;
+
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+.stats{
+
+padding:90px 22px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.stats-card{
+
+padding:34px 24px;
+
+min-height:auto;
+
+border-radius:24px;
+
+}
+
+.stats-icon{
+
+width:72px;
+
+height:72px;
+
+font-size:30px;
+
+margin-bottom:22px;
+
+}
+
+.stats-card h2{
+
+font-size:34px;
+
+}
+
+.stats-card p{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media(max-width:480px){
+
+.stats-card{
+
+border-radius:20px;
+
+}
+
+.stats-card:hover{
+
+transform:
+
+translateY(-8px)
+
+scale(1.02);
+
+}
+
+.stats-card h2{
+
+font-size:30px;
+
+}
+
+.stats-card p{
+
+font-size:14px;
+
+}
+
+.stats-line{
+
+width:50px;
+
+}
+
+}
+
+/* ==========================
+   Reduced Motion
+========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+.stats-card,
+
+.stats::before,
+
+.stats::after,
+
+.stats-icon{
+
+animation:none;
+
+transition:none;
+
+}
+
+.stats-card:hover{
+
+transform:none;
+
+}
+
+}

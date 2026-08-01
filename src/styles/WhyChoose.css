@@ -1,0 +1,1017 @@
+/* ==========================================
+   WHY CHOOSE V5
+========================================== */
+
+.why-section{
+
+position:relative;
+
+overflow:hidden;
+
+background:#050505;
+
+padding:150px 6%;
+
+isolation:isolate;
+
+}
+
+/* ==========================================
+   Premium Neon Background
+========================================== */
+
+.why-section::before{
+
+content:"";
+
+position:absolute;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:#00FF88;
+
+top:10%;
+
+left:8%;
+
+box-shadow:
+
+0 0 8px #00FF88,
+
+0 0 18px #00FF88,
+
+0 0 35px rgba(0,255,136,.95);
+
+animation:dotOne 13s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+.why-section::after{
+
+content:"";
+
+position:absolute;
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#00FF88;
+
+top:48%;
+
+right:9%;
+
+box-shadow:
+
+0 0 8px #00FF88,
+
+0 0 18px #00FF88,
+
+0 0 35px rgba(0,255,136,.95);
+
+animation:dotTwo 16s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+.why-grid{
+
+position:relative;
+
+z-index:2;
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:.9fr 1.1fr;
+
+gap:90px;
+
+align-items:start;
+
+}
+
+/* Third Dot */
+
+.why-grid::before{
+
+content:"";
+
+position:absolute;
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:#00FF88;
+
+left:60%;
+
+bottom:12%;
+
+box-shadow:
+
+0 0 8px #00FF88,
+
+0 0 18px #00FF88,
+
+0 0 35px rgba(0,255,136,.95);
+
+animation:dotThree 18s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+/* ==========================================
+   Left Side
+========================================== */
+
+.why-left{
+
+position:sticky;
+
+top:120px;
+
+}
+
+.why-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:12px 28px;
+
+border-radius:40px;
+
+background:rgba(0,255,136,.05);
+
+border:1px solid rgba(0,255,136,.18);
+
+color:#D4AF37;
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+margin-bottom:28px;
+
+}
+
+.why-left h2{
+
+font-size:66px;
+
+font-weight:800;
+
+line-height:1.15;
+
+color:#ffffff;
+
+margin-bottom:24px;
+
+}
+/* ==========================================
+   Vertex Highlight
+========================================== */
+
+.vertex-highlight{
+
+background:linear-gradient(
+
+135deg,
+
+#00FF88 0%,
+
+#49FFAE 45%,
+
+#D4AF37 100%
+
+);
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+
+0 0 12px rgba(0,255,136,.18),
+
+0 0 24px rgba(0,255,136,.10);
+
+}
+
+.why-left p{
+
+max-width:540px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#D6D6D6;
+
+}
+
+/* ==========================================
+   Right Side
+========================================== */
+
+.why-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* ==========================================
+   Premium Cards
+========================================== */
+
+.why-card{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:28px;
+
+padding:30px 34px;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(18,18,18,.96),
+
+rgba(8,8,8,.98)
+
+);
+
+border:1px solid rgba(0,255,136,.12);
+
+backdrop-filter:blur(22px);
+
+-webkit-backdrop-filter:blur(22px);
+
+cursor:pointer;
+
+transition:
+
+transform .45s ease,
+
+border-color .45s ease,
+
+box-shadow .45s ease,
+
+background .45s ease;
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.45);
+
+}
+
+/* Premium Glow */
+
+.why-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(
+
+circle at top left,
+
+rgba(0,255,136,.12),
+
+rgba(212,175,55,.08),
+
+transparent 72%
+
+);
+
+opacity:0;
+
+transition:.45s;
+
+pointer-events:none;
+
+}
+
+.why-card:hover::before,
+
+.why-card.active::before{
+
+opacity:1;
+
+}
+
+.why-card:hover,
+
+.why-card.active{
+
+transform:translateY(-8px);
+
+border-color:rgba(212,175,55,.25);
+
+box-shadow:
+
+0 28px 65px rgba(0,0,0,.60),
+
+0 0 18px rgba(0,255,136,.16),
+
+0 0 32px rgba(212,175,55,.12);
+
+}
+/* ==========================================
+   Card Header
+========================================== */
+
+.why-card-top{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:20px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.why-card-top h3{
+
+font-size:29px;
+
+font-weight:700;
+
+color:#ffffff;
+
+transition:.4s ease;
+
+}
+
+.why-card:hover .why-card-top h3,
+
+.why-card.active .why-card-top h3{
+
+color:#F7E7A4;
+
+text-shadow:
+
+0 0 10px rgba(212,175,55,.20),
+
+0 0 20px rgba(0,255,136,.12);
+
+}
+
+/* ==========================================
+   Premium Icon
+========================================== */
+
+.why-icon{
+
+width:54px;
+
+height:54px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+flex-shrink:0;
+
+border-radius:50%;
+
+background:rgba(0,255,136,.08);
+
+border:1px solid rgba(0,255,136,.20);
+
+color:#00FF88;
+
+font-size:28px;
+
+font-weight:700;
+
+transition:all .45s cubic-bezier(.22,1,.36,1);
+
+}
+
+.why-card.active .why-icon{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#00FF88,
+
+#D4AF37
+
+);
+
+color:#050505;
+
+border-color:#D4AF37;
+
+transform:rotate(180deg);
+
+box-shadow:
+
+0 0 18px rgba(0,255,136,.25),
+
+0 0 34px rgba(212,175,55,.16);
+
+}
+
+/* ==========================================
+   Apple Smooth Accordion
+========================================== */
+
+.why-content{
+
+display:grid;
+
+grid-template-rows:0fr;
+
+opacity:0;
+
+margin-top:0;
+
+transition:
+
+grid-template-rows .55s cubic-bezier(.22,1,.36,1),
+
+opacity .35s ease,
+
+margin-top .35s ease;
+
+}
+
+.why-content.open{
+
+grid-template-rows:1fr;
+
+opacity:1;
+
+margin-top:18px;
+
+}
+
+.why-content p{
+
+overflow:hidden;
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#D8D8D8;
+
+transform:translateY(-12px);
+
+transition:transform .55s cubic-bezier(.22,1,.36,1);
+
+}
+
+.why-content.open p{
+
+transform:translateY(0);
+
+}
+/* ==========================================
+   Active Luxury Effect
+========================================== */
+
+.why-card.active{
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(22,22,22,.98),
+
+rgba(8,8,8,.98)
+
+);
+
+border:1px solid rgba(212,175,55,.28);
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.65),
+
+0 0 22px rgba(0,255,136,.18),
+
+0 0 42px rgba(212,175,55,.14);
+
+}
+
+/* Left Premium Line */
+
+.why-card.active::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:4px;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#00FF88,
+
+#D4AF37
+
+);
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   Premium Hover Shine
+========================================== */
+
+.why-card .shine{
+
+position:absolute;
+
+top:-130%;
+
+left:-45%;
+
+width:55%;
+
+height:260%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.06),
+
+rgba(0,255,136,.08),
+
+rgba(212,175,55,.08),
+
+transparent
+
+);
+
+transform:rotate(24deg);
+
+transition:1.2s;
+
+pointer-events:none;
+
+}
+
+.why-card:hover .shine{
+
+left:150%;
+
+}
+
+/* ==========================================
+   Premium Floating Animation
+========================================== */
+
+.why-card{
+
+animation:cardReveal .8s ease both;
+
+}
+
+.why-card:nth-child(2){
+
+animation-delay:.12s;
+
+}
+
+.why-card:nth-child(3){
+
+animation-delay:.24s;
+
+}
+
+.why-card:nth-child(4){
+
+animation-delay:.36s;
+
+}
+
+@keyframes cardReveal{
+
+from{
+
+opacity:0;
+
+transform:translateY(55px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+   Active Glow Pulse
+========================================== */
+
+.why-card.active{
+
+animation:
+
+premiumPulse 3.5s ease-in-out infinite;
+
+}
+
+@keyframes premiumPulse{
+
+0%,100%{
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.60),
+
+0 0 18px rgba(0,255,136,.18),
+
+0 0 30px rgba(212,175,55,.12);
+
+}
+
+50%{
+
+box-shadow:
+
+0 30px 80px rgba(0,0,0,.70),
+
+0 0 30px rgba(0,255,136,.28),
+
+0 0 50px rgba(212,175,55,.20);
+
+}
+
+}
+/* ==========================================
+   Premium Neon Green Dots
+========================================== */
+
+@keyframes dotOne{
+
+0%{
+
+transform:translate(0,0) scale(1);
+
+opacity:.70;
+
+}
+
+25%{
+
+transform:translate(18px,-15px) scale(1.08);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translate(8px,18px) scale(.95);
+
+opacity:.75;
+
+}
+
+75%{
+
+transform:translate(-15px,-10px) scale(1.05);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(0,0) scale(1);
+
+opacity:.70;
+
+}
+
+}
+
+@keyframes dotTwo{
+
+0%{
+
+transform:translate(0,0);
+
+opacity:.65;
+
+}
+
+30%{
+
+transform:translate(-20px,16px);
+
+opacity:1;
+
+}
+
+60%{
+
+transform:translate(12px,-18px);
+
+opacity:.75;
+
+}
+
+100%{
+
+transform:translate(0,0);
+
+opacity:.65;
+
+}
+
+}
+
+@keyframes dotThree{
+
+0%{
+
+transform:translateY(0);
+
+opacity:.70;
+
+}
+
+50%{
+
+transform:translateY(-22px);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(0);
+
+opacity:.70;
+
+}
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:1100px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+gap:60px;
+
+}
+
+.why-left{
+
+position:relative;
+
+top:0;
+
+text-align:center;
+
+}
+
+.why-left p{
+
+margin:auto;
+
+max-width:700px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.why-section{
+
+padding:100px 22px;
+
+}
+
+.why-left h2{
+
+font-size:42px;
+
+}
+
+.why-left p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.why-card{
+
+padding:22px;
+
+border-radius:22px;
+
+}
+
+.why-card-top h3{
+
+font-size:23px;
+
+}
+
+.why-icon{
+
+width:46px;
+
+height:46px;
+
+font-size:24px;
+
+}
+
+.why-content p{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+   Small Phones
+========================================== */
+
+@media(max-width:480px){
+
+.why-left h2{
+
+font-size:34px;
+
+}
+
+.why-left p{
+
+font-size:15px;
+
+}
+
+.why-badge{
+
+font-size:11px;
+
+padding:10px 22px;
+
+letter-spacing:2px;
+
+}
+
+.why-card{
+
+padding:18px;
+
+border-radius:20px;
+
+}
+
+.why-card-top h3{
+
+font-size:20px;
+
+}
+
+.why-icon{
+
+width:40px;
+
+height:40px;
+
+font-size:20px;
+
+}
+
+}
+
+/* ==========================================
+   Reduced Motion
+========================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+.why-section::before,
+
+.why-section::after,
+
+.why-grid::before,
+
+.why-card,
+
+.why-card::before,
+
+.why-card::after{
+
+animation:none;
+
+transition:none;
+
+}
+
+.why-card:hover{
+
+transform:none;
+
+}
+
+}

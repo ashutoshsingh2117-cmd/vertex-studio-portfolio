@@ -7,15 +7,14 @@ function Hero() {
       className="hero"
       id="home"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.82)), url(${heroBg})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.75)), url(${heroBg})`,
       }}
     >
       <div className="hero-overlay"></div>
 
       <div className="hero-container">
 
-        <div className="hero-left">
-        </div>
+        <div className="hero-left"></div>
 
         <div className="hero-right">
 
@@ -24,9 +23,21 @@ function Hero() {
           </div>
 
           <h1>
-            WE BUILD <br />
+
+            <span className="hero-gradient">
+              WE
+            </span>{" "}
+
+            BUILD <br />
+
             PREMIUM <br />
-            DIGITAL <span>EXPERIENCES</span>
+
+            DIGITAL{" "}
+
+            <span className="hero-gradient">
+              EXPERIENCES
+            </span>
+
           </h1>
 
           <p>
@@ -65,30 +76,22 @@ function Hero() {
             </button>
 
           </div>
-                    <div className="hero-stats">
+
+          <div className="hero-stats">
 
             <div className="stat-box">
-
               <h2>50+</h2>
-
               <span>Projects</span>
-
             </div>
 
             <div className="stat-box">
-
               <h2>100%</h2>
-
               <span>Premium Design</span>
-
             </div>
 
             <div className="stat-box">
-
               <h2>24/7</h2>
-
               <span>Support</span>
-
             </div>
 
           </div>
@@ -111,7 +114,8 @@ function Hero() {
         <span></span>
 
       </div>
-          </section>
+
+    </section>
   );
 }
 

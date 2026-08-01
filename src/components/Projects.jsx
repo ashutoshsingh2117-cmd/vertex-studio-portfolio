@@ -9,27 +9,27 @@ function Projects() {
   const projects = [
 
     {
-      id: "01",
-      title: "Luxury E-Commerce Website",
-      category: "Web Design & Development",
       image: ecommerce,
-      featured: true,
+      category: "WEB DESIGN & DEVELOPMENT",
+      title: "Luxury E-Commerce Website",
+      description:
+        "Crafted with premium UI, luxury aesthetics and modern web technologies to deliver an unforgettable digital experience.",
     },
 
     {
-      id: "02",
-      title: "Premium Gym Website",
-      category: "Fitness Website",
       image: gym,
-      featured: false,
+      category: "FITNESS WEBSITE",
+      title: "Premium Gym Website",
+      description:
+        "Premium fitness experience designed with modern visuals, smooth animations and high performance architecture.",
     },
 
     {
-      id: "03",
-      title: "Luxury Restaurant Website",
-      category: "Restaurant Branding",
       image: restaurant,
-      featured: false,
+      category: "RESTAURANT BRANDING",
+      title: "Luxury Restaurant Website",
+      description:
+        "Elegant restaurant website focused on luxury branding, immersive visuals and seamless user experience.",
     },
 
   ];
@@ -48,40 +48,31 @@ function Projects() {
         </span>
 
         <h2>
-          Featured Projects
+
+          <span className="featured-gradient">
+            Featured
+          </span>{" "}
+
+          Projects
+
         </h2>
 
         <p>
-
           Explore a selection of premium digital
           experiences crafted with luxury aesthetics,
           modern UI and flawless performance.
-
         </p>
 
       </div>
 
-      <div className="featured-projects-grid">
+      <div className="projects-list">
 
-        {projects.map((project, index) => (
+        {projects.map((project,index)=>(
 
-          <div
-
+          <article
+            className="project-card"
             key={index}
-
-            className={
-              project.featured
-                ? "project-card featured-card"
-                : "project-card"
-            }
-
           >
-
-            <div className="project-number">
-
-              {project.id}
-
-            </div>
 
             <div className="project-image">
 
@@ -92,46 +83,23 @@ function Projects() {
 
             </div>
 
-            <div className="project-overlay">
+            <div className="project-content">
 
               <span className="project-category">
-
                 {project.category}
-
               </span>
 
               <h3>
-
                 {project.title}
-
               </h3>
 
-              {
-
-                project.featured && (
-
-                  <p className="project-description">
-
-                    Crafted with premium UI, luxury
-                    aesthetics and modern web
-                    technologies to deliver an
-                    unforgettable digital experience.
-
-                  </p>
-
-                )
-
-              }
-
-              <button className="project-btn">
-
-                View Project →
-
-              </button>
+              <p>
+                {project.description}
+              </p>
 
             </div>
 
-          </div>
+          </article>
 
         ))}
 
