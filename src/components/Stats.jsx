@@ -1,4 +1,5 @@
 import "../styles/Stats.css";
+
 import {
   FiAward,
   FiZap,
@@ -9,89 +10,107 @@ import {
 function Stats() {
 
   const stats = [
-
     {
-      icon:<FiAward />,
-      number:"Premium",
-      title:"Quality Design",
+      icon: <FiAward />,
+      number: "Premium",
+      title: "Quality Design",
     },
-
     {
-      icon:<FiZap />,
-      number:"Fast",
-      title:"Delivery",
+      icon: <FiZap />,
+      number: "Fast",
+      title: "Delivery",
     },
-
     {
-      icon:<FiSmartphone />,
-      number:"100%",
-      title:"Responsive",
+      icon: <FiSmartphone />,
+      number: "100%",
+      title: "Responsive",
     },
-
     {
-      icon:<FiHeadphones />,
-      number:"24/7",
-      title:"Support",
+      icon: <FiHeadphones />,
+      number: "24/7",
+      title: "Support",
     },
-
   ];
 
   return (
+    <section className="stats">
 
-<section className="stats">
+      <div className="stats-ambient"></div>
 
-<div className="red-grid"></div>
+      <div className="stats-particles" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-<div className="red-blur blur-one"></div>
-<div className="red-blur blur-two"></div>
+      <div className="stats-wrapper">
 
-<div className="stats-wrapper">
+        <div className="stats-grid">
 
-<div className="stats-grid">
+          {stats.map((item, index) => (
 
-{
+            <div
+              className="stats-card"
+              key={index}
+            >
 
-stats.map((item,index)=>(
+              <div className="card-corner"></div>
 
-<div
-className="stats-card"
-key={index}
->
+              <div className="stats-card-top">
 
-<div className="stats-icon">
+                <span className="stats-index">
+                  0{index + 1}
+                </span>
 
-{item.icon}
+                <div className="stats-icon">
+                  {item.icon}
+                </div>
 
-</div>
+              </div>
 
-<h2>
+              <div className="stats-content">
 
-{item.number}
+                <span className="stats-eyebrow">
+                  VERTEX STUDIO
+                </span>
 
-</h2>
+                <h2>
+                  {item.number}
+                </h2>
 
-<p>
+                <p>
+                  {item.title}
+                </p>
 
-{item.title}
+              </div>
 
-</p>
+              <div className="stats-bottom">
 
-<div className="stats-line"></div>
+                <span className="stats-line"></span>
 
-</div>
+                <span className="stats-arrow">
+                  ↗
+                </span>
 
-))
+              </div>
 
-}
+            </div>
 
-</div>
+          ))}
 
-</div>
+        </div>
 
-</section>
+      </div>
 
+    </section>
   );
-
 }
 
 export default Stats;
