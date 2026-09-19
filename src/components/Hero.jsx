@@ -23,7 +23,6 @@ function Hero() {
           </div>
 
           <h1>
-
             <span className="hero-gradient">
               WE
             </span>{" "}
@@ -37,7 +36,6 @@ function Hero() {
             <span className="hero-gradient">
               EXPERIENCES
             </span>
-
           </h1>
 
           <p>
@@ -110,9 +108,7 @@ function Hero() {
             })
         }
       >
-
         <span></span>
-
       </div>
 
     </section>
