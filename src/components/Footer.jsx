@@ -6,18 +6,12 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-import abstractBg from "../assets/abstract-bg.png";
 import "../styles/Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <div
-        className="footer-bg"
-        style={{
-          backgroundImage: `url(${abstractBg})`,
-        }}
-      >
+      <div className="footer-bg">
         <div className="footer-overlay"></div>
       </div>
 
@@ -28,7 +22,6 @@ function Footer() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-
         {/* Premium Top Divider */}
         <div className="footer-top-divider"></div>
 
@@ -90,6 +83,7 @@ function Footer() {
             <span>WhatsApp</span>
           </a>
         </div>
+
         <div className="footer-divider"></div>
 
         <p className="footer-copy">
@@ -106,7 +100,6 @@ function Footer() {
             Ashutosh Kumar
           </span>
         </p>
-
       </motion.div>
     </footer>
   );
