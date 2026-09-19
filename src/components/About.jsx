@@ -6,6 +6,25 @@ function About() {
 
     <section id="about" className="about-section">
 
+      {/* Animated Background Dots */}
+
+      <div className="about-dots" aria-hidden="true">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </div>
+
       <div className="about-left">
 
         <span className="about-badge">
