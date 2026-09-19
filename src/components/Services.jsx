@@ -1,110 +1,75 @@
+import {
+  FiGlobe,
+  FiLayout,
+  FiBriefcase,
+  FiTarget,
+  FiPenTool,
+  FiInstagram,
+  FiVideo,
+  FiZap,
+} from "react-icons/fi";
+
 import "../styles/Services.css";
 
 function Services() {
-
   const services = [
     {
-      icon: "🌐",
-      title: "Premium Web Design",
+      icon: <FiGlobe />,
+      title: "Web Design & Development",
       description:
-        "Luxury and modern website designs crafted to give your business a powerful first impression.",
+        "Premium responsive websites built with modern design, smooth interactions and powerful technology.",
     },
     {
-      icon: "💻",
-      title: "Web Development",
-      description:
-        "Responsive, secure and high-performance websites built with modern technologies.",
-    },
-    {
-      icon: "🏢",
-      title: "Business Website",
-      description:
-        "Professional business websites that build trust and generate quality leads.",
-    },
-    {
-      icon: "👨‍💼",
-      title: "Portfolio Website",
-      description:
-        "Premium portfolio websites that beautifully showcase your work and achievements.",
-    },
-    {
-      icon: "🤝",
-      title: "NGO Website",
-      description:
-        "Modern NGO websites designed to inspire trust and increase community impact.",
-    },
-    {
-      icon: "🚀",
-      title: "Landing Page",
-      description:
-        "High-converting landing pages focused on performance and customer engagement.",
-    },
-    {
-      icon: "🎨",
+      icon: <FiLayout />,
       title: "UI / UX Design",
       description:
-        "Elegant interfaces with intuitive user experiences across every device.",
+        "Elegant interfaces and intuitive user experiences designed around your brand and audience.",
     },
     {
-      icon: "♻️",
-      title: "Website Redesign",
+      icon: <FiBriefcase />,
+      title: "Business Websites",
       description:
-        "Transform outdated websites into premium digital experiences.",
+        "Professional digital experiences designed to build trust and turn visitors into clients.",
     },
     {
-      icon: "🖋️",
-      title: "Logo Design",
+      icon: <FiTarget />,
+      title: "Landing Pages",
       description:
-        "Unique luxury logos that perfectly represent your brand identity.",
+        "Focused landing experiences built for campaigns, products, conversions and growth.",
     },
     {
-      icon: "🖼️",
-      title: "Banner Design",
+      icon: <FiPenTool />,
+      title: "Brand & Logo Design",
       description:
-        "Creative banners designed for promotions, branding and advertising.",
+        "Distinctive visual identities crafted to create a refined and memorable brand presence.",
     },
     {
-      icon: "📸",
-      title: "Thumbnail Design",
+      icon: <FiInstagram />,
+      title: "Social Media Design",
       description:
-        "Scroll-stopping thumbnails that increase clicks and engagement.",
+        "Premium social creatives that keep your visual identity consistent and engaging.",
     },
     {
-      icon: "📱",
-      title: "Social Media Posts",
-      description:
-        "Premium social media creatives that make your brand stand out.",
-    },
-    {
-      icon: "📈",
-      title: "Social Media Handling",
-      description:
-        "Complete social media management for consistent brand growth.",
-    },
-    {
-      icon: "🎬",
+      icon: <FiVideo />,
       title: "Video Editing",
       description:
-        "Professional cinematic editing with premium transitions and effects.",
+        "Modern cinematic edits, transitions and visual effects for powerful digital content.",
     },
     {
-      icon: "⚡",
-      title: "Website Optimization",
+      icon: <FiZap />,
+      title: "Optimization & Support",
       description:
-        "Improve speed, SEO and performance for the best user experience.",
-    },
-    {
-      icon: "🛠️",
-      title: "Maintenance & Support",
-      description:
-        "Regular updates, security monitoring and long-term website support.",
+        "Performance improvements, maintenance and reliable support for your digital presence.",
     },
   ];
 
   return (
     <section id="services" className="services-section">
 
-      <div className="services-particles">
+      <div className="services-orb services-orb-one"></div>
+      <div className="services-orb services-orb-two"></div>
+
+      <div className="services-particles" aria-hidden="true">
         <span className="services-dot dot1"></span>
         <span className="services-dot dot2"></span>
         <span className="services-dot dot3"></span>
@@ -113,8 +78,6 @@ function Services() {
         <span className="services-dot dot6"></span>
         <span className="services-dot dot7"></span>
         <span className="services-dot dot8"></span>
-        <span className="services-dot dot9"></span>
-        <span className="services-dot dot10"></span>
       </div>
 
       <div className="services-header">
@@ -131,9 +94,9 @@ function Services() {
         </h2>
 
         <p>
-          We create luxury digital experiences that combine
-          modern design, development and creativity to help
-          your brand stand above the competition.
+          From powerful websites to refined digital experiences,
+          we create modern solutions designed to make your brand
+          stand apart.
         </p>
 
       </div>
@@ -142,27 +105,44 @@ function Services() {
 
         {services.map((service, index) => (
 
-          <div className="service-card" key={index}>
+          <article
+            className="service-card"
+            key={service.title}
+          >
 
-            <div className="service-glow"></div>
+            <div className="service-card-glow"></div>
 
-            <div className="service-top">
+            <div className="service-number">
+              {String(index + 1).padStart(2, "0")}
+            </div>
 
+            <div className="service-top-line"></div>
+
+            <div className="service-icon-wrap">
               <div className="service-icon">
                 {service.icon}
               </div>
+            </div>
 
-              <div className="service-number">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+            <div className="service-content">
+
+              <h3>{service.title}</h3>
+
+              <p>{service.description}</p>
 
             </div>
 
-            <h3>{service.title}</h3>
+            <div className="service-bottom">
 
-            <p>{service.description}</p>
+              <span className="service-line"></span>
 
-          </div>
+              <span className="service-arrow">
+                ↗
+              </span>
+
+            </div>
+
+          </article>
 
         ))}
 
@@ -170,7 +150,6 @@ function Services() {
 
     </section>
   );
-
 }
 
 export default Services;

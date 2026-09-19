@@ -1,85 +1,180 @@
 .services-section{
+
   position:relative;
+
   padding:150px 6%;
-  background:#0B0B0B;
+
+  background:#08070B;
+
   overflow:hidden;
+
 }
 
 /* ==========================
-   Luxury Background
+   Background
 ========================== */
 
 .services-section::before{
+
   content:"";
+
   position:absolute;
+
   inset:0;
+
   background:
-    radial-gradient(circle at 20% 15%,rgba(255,255,255,.035),transparent 28%),
-    radial-gradient(circle at 82% 12%,rgba(155,92,255,.08),transparent 35%),
-    radial-gradient(circle at 15% 80%,rgba(170,45,60,.05),transparent 28%),
-    radial-gradient(circle at 75% 85%,rgba(255,255,255,.02),transparent 24%);
+
+    radial-gradient(
+      circle at 15% 18%,
+      rgba(155,92,255,.10),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(115,55,255,.07),
+      transparent 32%
+    );
+
   pointer-events:none;
+
 }
 
 .services-section::after{
+
   content:"";
+
   position:absolute;
-  width:700px;
-  height:700px;
-  right:-260px;
-  top:-260px;
-  border-radius:50%;
-  background:radial-gradient(circle,
-      rgba(155,92,255,.12),
-      rgba(255,255,255,.02),
-      transparent 72%);
-  filter:blur(180px);
+
+  width:800px;
+
+  height:500px;
+
+  left:50%;
+
+  top:45%;
+
+  transform:translate(-50%,-50%);
+
+  background:
+
+    radial-gradient(
+      ellipse,
+      rgba(155,92,255,.055),
+      transparent 70%
+    );
+
+  filter:blur(100px);
+
   pointer-events:none;
+
 }
 
 /* ==========================
-   Floating Purple Dots
+   Ambient Orbs
+========================== */
+
+.services-orb{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  pointer-events:none;
+
+  filter:blur(100px);
+
+}
+
+.services-orb-one{
+
+  width:280px;
+
+  height:280px;
+
+  top:15%;
+
+  left:-170px;
+
+  background:rgba(125,55,255,.12);
+
+}
+
+.services-orb-two{
+
+  width:320px;
+
+  height:320px;
+
+  right:-180px;
+
+  bottom:8%;
+
+  background:rgba(155,92,255,.09);
+
+}
+
+/* ==========================
+   Floating Particles
 ========================== */
 
 .services-particles{
+
   position:absolute;
+
   inset:0;
+
   z-index:1;
+
   pointer-events:none;
+
 }
 
 .services-dot{
+
   position:absolute;
-  width:8px;
-  height:8px;
+
+  width:4px;
+
+  height:4px;
+
   border-radius:50%;
-  background:#9B5CFF;
+
+  background:#A66CFF;
+
   box-shadow:
-    0 0 10px rgba(155,92,255,.9),
-    0 0 24px rgba(155,92,255,.45);
-  animation:floatDot 8s ease-in-out infinite;
+
+    0 0 9px rgba(166,108,255,.75),
+
+    0 0 18px rgba(155,92,255,.30);
+
+  opacity:.3;
+
+  animation:servicesFloat 9s ease-in-out infinite;
+
 }
 
-.dot1{top:8%;left:10%;}
-.dot2{top:16%;right:15%;animation-delay:1s;}
-.dot3{top:28%;left:32%;animation-delay:2s;}
-.dot4{top:42%;right:22%;animation-delay:3s;}
-.dot5{top:55%;left:8%;animation-delay:4s;}
-.dot6{top:68%;right:12%;animation-delay:5s;}
-.dot7{top:82%;left:24%;animation-delay:6s;}
-.dot8{top:24%;left:72%;animation-delay:7s;}
-.dot9{top:60%;left:55%;animation-delay:2.5s;}
-.dot10{top:88%;right:35%;animation-delay:5.5s;}
+.dot1{top:9%;left:9%;}
+.dot2{top:18%;right:14%;animation-delay:1s;}
+.dot3{top:34%;left:25%;animation-delay:2s;}
+.dot4{top:46%;right:8%;animation-delay:3s;}
+.dot5{top:61%;left:10%;animation-delay:4s;}
+.dot6{top:72%;right:27%;animation-delay:5s;}
+.dot7{top:86%;left:38%;animation-delay:6s;}
+.dot8{top:27%;right:39%;animation-delay:7s;}
 
-@keyframes floatDot{
+@keyframes servicesFloat{
+
   0%,100%{
     transform:translateY(0);
-    opacity:.45;
+    opacity:.18;
   }
+
   50%{
-    transform:translateY(-18px);
-    opacity:1;
+    transform:translateY(-16px);
+    opacity:.6;
   }
+
 }
 
 /* ==========================
@@ -87,264 +182,235 @@
 ========================== */
 
 .services-header{
+
   position:relative;
+
   z-index:2;
-  max-width:900px;
-  margin:0 auto 100px;
+
+  max-width:880px;
+
+  margin:0 auto 88px;
+
   text-align:center;
+
 }
 
 .services-badge{
+
   display:inline-flex;
+
   align-items:center;
+
   justify-content:center;
-  padding:14px 34px;
+
+  padding:12px 30px;
+
   border-radius:999px;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,215,0,.18);
-  color:#FFD700;
-  font-size:13px;
+
+  background:rgba(155,92,255,.065);
+
+  border:1px solid rgba(155,92,255,.20);
+
+  color:#B982FF;
+
+  font-size:12px;
+
   font-weight:700;
+
   letter-spacing:3px;
-  margin-bottom:24px;
+
+  margin-bottom:26px;
+
   box-shadow:
-    0 0 12px rgba(255,215,0,.08),
-    0 0 22px rgba(170,35,45,.08);
+
+    0 0 18px rgba(155,92,255,.06);
+
 }
 
 .services-header h2{
-  font-size:68px;
+
+  margin:0 0 22px;
+
+  font-size:66px;
+
   font-weight:800;
+
   line-height:1.08;
-  margin-bottom:22px;
-  color:#fff;
+
+  letter-spacing:-1.5px;
+
+  color:#FFFFFF;
+
 }
 
 .solutions-text{
-  background:linear-gradient(
-    180deg,
-    #FFFFFF,
-    #EEE3FF,
-    #CFAEFF,
-    #9B5CFF
-  );
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #FFFFFF,
+      #D9C3FF,
+      #A66CFF
+    );
+
   -webkit-background-clip:text;
+
   -webkit-text-fill-color:transparent;
+
   background-clip:text;
+
 }
 
 .services-header p{
-  max-width:760px;
+
+  max-width:740px;
+
   margin:auto;
-  color:#CFCFCF;
-  font-size:20px;
+
+  color:#B8B4BE;
+
+  font-size:18px;
+
   line-height:1.9;
+
 }
+
 /* ==========================
-   Services Grid
+   Grid
 ========================== */
 
 .services-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
+
   position:relative;
+
   z-index:2;
+
+  max-width:1450px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:24px;
+
 }
 
 /* ==========================
-   Service Card
+   Card
 ========================== */
 
 .service-card{
+
   position:relative;
+
+  min-height:330px;
+
+  padding:30px;
+
   overflow:hidden;
-  padding:34px;
-  min-height:340px;
-  border-radius:28px;
-
-  background:rgba(255,255,255,.045);
-
-  backdrop-filter:blur(22px);
-  -webkit-backdrop-filter:blur(22px);
-
-  border:1px solid rgba(255,215,0,.12);
 
   display:flex;
+
   flex-direction:column;
 
-  transition:.45s ease;
+  border-radius:27px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    );
+
+  border:1px solid rgba(255,255,255,.085);
+
+  box-shadow:
+
+    inset 0 1px 0 rgba(255,255,255,.035),
+
+    0 18px 45px rgba(0,0,0,.30);
+
+  transition:
+
+    transform .5s ease,
+    border-color .5s ease,
+    box-shadow .5s ease,
+    background .5s ease;
+
 }
 
-/* Luxury Top Line */
+/* Subtle purple light */
 
-.service-card::after{
-
-  content:"";
+.service-card-glow{
 
   position:absolute;
 
-  top:0;
-  left:16%;
+  width:250px;
 
-  width:68%;
-  height:3px;
+  height:250px;
 
-  border-radius:50px;
+  top:-150px;
 
-  background:linear-gradient(
-    90deg,
-    transparent,
-    #D8B4FF,
-    #9B5CFF,
-    #D8B4FF,
-    transparent
-  );
+  right:-100px;
 
-  box-shadow:
-    0 0 14px rgba(155,92,255,.45),
-    0 0 28px rgba(155,92,255,.22);
+  border-radius:50%;
 
-  transition:.45s;
+  background:
 
-}
+    radial-gradient(
+      circle,
+      rgba(155,92,255,.25),
+      transparent 70%
+    );
 
-.service-card:hover::after{
+  filter:blur(20px);
 
-  width:76%;
-  left:12%;
+  opacity:.25;
 
-  box-shadow:
-    0 0 20px rgba(155,92,255,.60),
-    0 0 40px rgba(155,92,255,.30);
-
-}
-
-/* Premium Glow */
-
-.service-glow{
-
-  position:absolute;
-  inset:-80px;
-
-  background:radial-gradient(
-    circle,
-    rgba(155,92,255,.42),
-    rgba(155,92,255,.10),
-    transparent 72%
-  );
-
-  opacity:0;
-
-  transition:.45s;
+  transition:.55s ease;
 
   pointer-events:none;
 
 }
 
-.service-card:hover .service-glow{
+/* Top accent */
 
-  opacity:1;
-
-}
-
-/* Shine */
-
-.service-card::before{
-
-  content:"";
+.service-top-line{
 
   position:absolute;
 
   top:0;
-  left:-140%;
 
-  width:80%;
-  height:100%;
+  left:18%;
 
-  background:linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,.16),
-    transparent
-  );
+  width:64%;
 
-  transition:.9s;
+  height:2px;
 
-}
+  border-radius:50px;
 
-.service-card:hover::before{
+  background:
 
-  left:150%;
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(155,92,255,.85),
+      rgba(199,163,255,.9),
+      rgba(155,92,255,.85),
+      transparent
+    );
 
-}
-
-/* Hover */
-
-.service-card:hover{
-
-  transform:
-    translateY(-14px)
-    scale(1.02);
-
-  border-color:rgba(155,92,255,.45);
+  opacity:.55;
 
   box-shadow:
-    0 0 35px rgba(155,92,255,.22),
-    0 0 80px rgba(155,92,255,.12),
-    0 25px 60px rgba(0,0,0,.45);
 
-}
-/* ==========================
-   Card Top
-========================== */
+    0 0 14px rgba(155,92,255,.35);
 
-.service-top{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:30px;
-
-}
-
-/* ==========================
-   Icon
-========================== */
-
-.service-icon{
-
-width:72px;
-height:72px;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-border-radius:20px;
-
-font-size:32px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(140,82,255,.28);
-
-box-shadow:
-inset 0 0 15px rgba(140,82,255,.08);
-
-transition:.45s ease;
-
-}
-
-.service-card:hover .service-icon{
-
-transform:rotate(-8deg) scale(1.12);
-
-border-color:rgba(155,92,255,.70);
-
-box-shadow:
-0 0 22px rgba(155,92,255,.42),
-0 0 46px rgba(155,92,255,.20);
+  transition:.5s;
 
 }
 
@@ -354,213 +420,614 @@ box-shadow:
 
 .service-number{
 
-font-size:60px;
-font-weight:800;
+  position:absolute;
 
-color:rgba(255,215,0,.18);
+  top:22px;
 
-transition:.45s;
+  right:26px;
+
+  font-size:54px;
+
+  font-weight:800;
+
+  line-height:1;
+
+  letter-spacing:-3px;
+
+  color:rgba(155,92,255,.045);
+
+  user-select:none;
+
+  transition:.5s ease;
+
+}
+
+/* ==========================
+   Premium Icon
+========================== */
+
+.service-icon-wrap{
+
+  position:relative;
+
+  z-index:2;
+
+  width:70px;
+
+  height:70px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin-bottom:40px;
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(190,145,255,.18),
+      rgba(155,92,255,.07) 45%,
+      rgba(8,7,11,.70) 75%
+    );
+
+  border:1px solid rgba(155,92,255,.28);
+
+  box-shadow:
+
+    0 0 0 6px rgba(155,92,255,.025),
+
+    inset 0 0 20px rgba(155,92,255,.10),
+
+    0 0 25px rgba(155,92,255,.07);
+
+  transition:.5s ease;
+
+}
+
+/* Inner ring */
+
+.service-icon-wrap::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:7px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(166,108,255,.18);
+
+  transition:.5s ease;
+
+}
+
+/* Tiny gold accent */
+
+.service-icon-wrap::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:4px;
+
+  height:4px;
+
+  top:7px;
+
+  right:15px;
+
+  border-radius:50%;
+
+  background:#D4AF37;
+
+  box-shadow:
+
+    0 0 7px rgba(212,175,55,.45);
+
+  opacity:.65;
+
+}
+
+.service-icon{
+
+  position:relative;
+
+  z-index:2;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:#C39BFF;
+
+  font-size:28px;
+
+  transition:.5s ease;
+
+}
+
+.service-icon svg{
+
+  width:28px;
+
+  height:28px;
+
+  stroke-width:1.45;
+
+}
+
+/* ==========================
+   Content
+========================== */
+
+.service-content{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+.service-card h3{
+
+  margin:0 0 14px;
+
+  color:#F4F1F8;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  line-height:1.35;
+
+  transition:.4s ease;
+
+}
+
+.service-card p{
+
+  margin:0;
+
+  max-width:290px;
+
+  color:#A6A2AE;
+
+  font-size:14px;
+
+  line-height:1.85;
+
+}
+
+/* ==========================
+   Bottom Detail
+========================== */
+
+.service-bottom{
+
+  position:absolute;
+
+  left:30px;
+
+  right:30px;
+
+  bottom:25px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  z-index:2;
+
+}
+
+.service-line{
+
+  width:52px;
+
+  height:1px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(155,92,255,.75),
+      transparent
+    );
+
+  transition:.5s ease;
+
+}
+
+.service-arrow{
+
+  color:rgba(166,108,255,.45);
+
+  font-size:21px;
+
+  transition:.5s ease;
+
+}
+
+/* ==========================
+   Hover
+========================== */
+
+.service-card:hover{
+
+  transform:translateY(-11px);
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.07),
+      rgba(155,92,255,.035)
+    );
+
+  border-color:rgba(155,92,255,.30);
+
+  box-shadow:
+
+    inset 0 1px 0 rgba(255,255,255,.06),
+
+    0 25px 60px rgba(0,0,0,.48),
+
+    0 0 32px rgba(155,92,255,.10);
+
+}
+
+.service-card:hover .service-card-glow{
+
+  opacity:.75;
+
+  transform:scale(1.2);
+
+}
+
+.service-card:hover .service-top-line{
+
+  left:12%;
+
+  width:76%;
+
+  opacity:.95;
+
+  box-shadow:
+
+    0 0 18px rgba(155,92,255,.55);
 
 }
 
 .service-card:hover .service-number{
 
-color:#FFD700;
+  color:rgba(155,92,255,.10);
 
-text-shadow:
-0 0 14px rgba(255,215,0,.35),
-0 0 30px rgba(155,92,255,.28);
-
-transform:translateX(8px);
+  transform:translateX(-3px);
 
 }
 
-/* ==========================
-   Text
-========================== */
+.service-card:hover .service-icon-wrap{
 
-.service-card h3{
+  transform:translateY(-5px) scale(1.04);
 
-margin-bottom:18px;
+  border-color:rgba(166,108,255,.48);
 
-font-size:28px;
-font-weight:700;
+  box-shadow:
 
-color:#fff;
+    0 0 0 7px rgba(155,92,255,.035),
 
-transition:.4s;
+    inset 0 0 25px rgba(155,92,255,.14),
+
+    0 0 30px rgba(155,92,255,.16);
+
+}
+
+.service-card:hover .service-icon-wrap::before{
+
+  inset:5px;
+
+  border-color:rgba(166,108,255,.30);
+
+  transform:rotate(45deg);
+
+}
+
+.service-card:hover .service-icon{
+
+  color:#D2B4FF;
+
+  transform:scale(1.08);
+
+  filter:
+
+    drop-shadow(0 0 8px rgba(166,108,255,.40));
 
 }
 
 .service-card:hover h3{
 
-color:#fff;
+  color:#FFFFFF;
 
-text-shadow:
-0 0 12px rgba(155,92,255,.35);
+  text-shadow:
+
+    0 0 14px rgba(166,108,255,.18);
 
 }
 
-.service-card p{
+.service-card:hover .service-line{
 
-color:#cfcfcf;
+  width:82px;
 
-font-size:16px;
-line-height:1.9;
+  background:
+
+    linear-gradient(
+      90deg,
+      #A66CFF,
+      transparent
+    );
+
+}
+
+.service-card:hover .service-arrow{
+
+  color:#C39BFF;
+
+  transform:translate(4px,-4px);
+
+  text-shadow:
+
+    0 0 10px rgba(166,108,255,.45);
 
 }
 
 /* ==========================
-   Responsive
+   Tablet
 ========================== */
 
 @media(max-width:1400px){
 
-.services-grid{
+  .services-grid{
 
-grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
 
-}
+    max-width:1050px;
 
-}
-
-@media(max-width:1100px){
-
-.services-grid{
-
-grid-template-columns:repeat(2,1fr);
+  }
 
 }
 
-.services-header h2{
+/* ==========================
+   Smaller Tablet
+========================== */
 
-font-size:56px;
+@media(max-width:900px){
+
+  .services-section{
+
+    padding:120px 5%;
+
+  }
+
+  .services-header h2{
+
+    font-size:54px;
+
+  }
 
 }
 
-}
+/* ==========================
+   Mobile
+========================== */
 
 @media(max-width:768px){
 
-.services-section{
+  .services-section{
 
-padding:100px 20px;
+    padding:100px 20px;
+
+  }
+
+  .services-header{
+
+    margin-bottom:65px;
+
+  }
+
+  .services-header h2{
+
+    font-size:42px;
+
+    letter-spacing:-.8px;
+
+  }
+
+  .services-header p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+  }
+
+  .services-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+  }
+
+  .service-card{
+
+    min-height:290px;
+
+    padding:28px;
+
+    border-radius:23px;
+
+  }
+
+  .service-icon-wrap{
+
+    width:62px;
+
+    height:62px;
+
+    margin-bottom:36px;
+
+  }
+
+  .service-icon svg{
+
+    width:25px;
+
+    height:25px;
+
+  }
+
+  .service-number{
+
+    font-size:48px;
+
+  }
+
+  .service-card h3{
+
+    font-size:21px;
+
+  }
+
+  .service-card p{
+
+    font-size:14px;
+
+  }
 
 }
 
-.services-grid{
-
-grid-template-columns:1fr;
-gap:24px;
-
-}
-
-.services-header{
-
-margin-bottom:70px;
-
-}
-
-.services-header h2{
-
-font-size:42px;
-
-}
-
-.services-header p{
-
-font-size:16px;
-line-height:1.8;
-
-}
-
-.service-card{
-
-padding:30px;
-min-height:300px;
-
-}
-
-.service-icon{
-
-width:60px;
-height:60px;
-font-size:28px;
-
-}
-
-.service-number{
-
-font-size:46px;
-
-}
-
-.service-card h3{
-
-font-size:24px;
-
-}
-
-.service-card p{
-
-font-size:15px;
-
-}
-
-}
+/* ==========================
+   Small Phones
+========================== */
 
 @media(max-width:480px){
 
-.services-header h2{
+  .services-header h2{
 
-font-size:34px;
+    font-size:34px;
+
+  }
+
+  .services-badge{
+
+    padding:10px 22px;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+  }
+
+  .service-card{
+
+    min-height:275px;
+
+    padding:24px;
+
+    border-radius:21px;
+
+  }
+
+  .service-icon-wrap{
+
+    width:58px;
+
+    height:58px;
+
+    margin-bottom:32px;
+
+  }
+
+  .service-icon svg{
+
+    width:24px;
+
+    height:24px;
+
+  }
+
+  .service-number{
+
+    top:18px;
+
+    right:21px;
+
+    font-size:43px;
+
+  }
+
+  .service-card h3{
+
+    font-size:20px;
+
+  }
+
+  .service-card p{
+
+    font-size:13.5px;
+
+    line-height:1.75;
+
+  }
+
+  .service-bottom{
+
+    left:24px;
+
+    right:24px;
+
+    bottom:21px;
+
+  }
 
 }
 
-.services-badge{
+/* ==========================
+   Reduced Motion
+========================== */
 
-padding:10px 22px;
+@media(prefers-reduced-motion:reduce){
 
-font-size:11px;
+  .services-dot,
+  .service-card,
+  .service-card-glow,
+  .service-top-line,
+  .service-icon-wrap,
+  .service-icon,
+  .service-line,
+  .service-arrow{
 
-letter-spacing:2px;
+    animation:none;
 
-}
+    transition:none;
 
-.service-card{
+  }
 
-padding:24px;
+  .service-card:hover{
 
-border-radius:22px;
+    transform:none;
 
-}
-
-.service-icon{
-
-width:54px;
-height:54px;
-
-font-size:24px;
-
-}
-
-.service-number{
-
-font-size:40px;
-
-}
-
-.service-card h3{
-
-font-size:22px;
-
-}
-
-.service-card p{
-
-font-size:14px;
-line-height:1.8;
-
-}
+  }
 
 }
