@@ -38,25 +38,30 @@ function FAQ() {
 
   return (
     <section id="faq" className="faq">
+      {/* Ambient Lights */}
+      <div className="faq-blue-light left"></div>
+      <div className="faq-blue-light right"></div>
 
-      {/* Background Effects */}
-
-      <div className="faq-red-light left"></div>
-      <div className="faq-red-light right"></div>
-
-      <div className="faq-particle p1"></div>
-      <div className="faq-particle p2"></div>
-      <div className="faq-particle p3"></div>
+      {/* Floating Neon Dots */}
+      <div className="faq-dots" aria-hidden="true">
+        <span className="faq-dot d1"></span>
+        <span className="faq-dot d2"></span>
+        <span className="faq-dot d3"></span>
+        <span className="faq-dot d4"></span>
+        <span className="faq-dot d5"></span>
+        <span className="faq-dot d6"></span>
+        <span className="faq-dot d7"></span>
+        <span className="faq-dot d8"></span>
+        <span className="faq-dot d9"></span>
+        <span className="faq-dot d10"></span>
+        <span className="faq-dot d11"></span>
+        <span className="faq-dot d12"></span>
+      </div>
 
       <div className="faq-container">
-
         {/* Left Side */}
-
         <div className="faq-left">
-
-          <span className="faq-badge">
-            FAQ
-          </span>
+          <span className="faq-badge">FAQ</span>
 
           <h2>
             Questions?
@@ -65,77 +70,46 @@ function FAQ() {
           </h2>
 
           <p>
-            Everything you need to know about our design,
-            development and creative workflow.
-            Clear answers. Premium experience.
+            Everything you need to know about our design, development and
+            creative workflow. Clear answers. Premium experience.
           </p>
 
           <div className="faq-line"></div>
-
         </div>
 
         {/* Right Side */}
-
         <div className="faq-right">
-
           {faqs.map((item, index) => (
-
             <div
               key={index}
-              className={`faq-card ${
-                active === index ? "active" : ""
-              }`}
+              className={`faq-card ${active === index ? "active" : ""}`}
             >
-
               <button
                 className="faq-question"
                 onClick={() => toggleFAQ(index)}
               >
-
                 <div className="faq-number">
-
-                  {(index + 1)
-                    .toString()
-                    .padStart(2, "0")}
-
+                  {(index + 1).toString().padStart(2, "0")}
                 </div>
 
-                <h3>
-                  {item.question}
-                </h3>
+                <h3>{item.question}</h3>
 
                 <span className="faq-icon">
-
                   {active === index ? "−" : "+"}
-
                 </span>
-
               </button>
 
               <div
                 className={`faq-answer ${
-                  active === index
-                    ? "show"
-                    : ""
+                  active === index ? "show" : ""
                 }`}
               >
-
-                <p>
-
-                  {item.answer}
-
-                </p>
-
+                <p>{item.answer}</p>
               </div>
-
             </div>
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
