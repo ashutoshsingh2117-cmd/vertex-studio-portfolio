@@ -1,874 +1,656 @@
 /* ==========================================
-   WHY CHOOSE V5
+   WHY CHOOSE — BLACK / OLIVE LUXURY
 ========================================== */
 
-.why-section{
+.why-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 
-position:relative;
+  padding: 150px 6%;
 
-overflow:hidden;
-
-background:#050505;
-
-padding:150px 6%;
-
-isolation:isolate;
-
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(116, 126, 54, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 75%,
+      rgba(91, 99, 40, 0.055),
+      transparent 32%
+    ),
+    #070706;
 }
 
 /* ==========================================
-   Premium Neon Background
+   Subtle Ambient Light
 ========================================== */
 
-.why-section::before{
+.why-section::before {
+  content: "";
 
-content:"";
+  position: absolute;
 
-position:absolute;
+  width: 520px;
+  height: 520px;
 
-width:12px;
+  top: -300px;
+  left: -220px;
 
-height:12px;
+  border-radius: 50%;
 
-border-radius:50%;
+  background: radial-gradient(
+    circle,
+    rgba(128, 137, 61, 0.10),
+    transparent 70%
+  );
 
-background:#00FF88;
+  filter: blur(60px);
 
-top:10%;
+  pointer-events: none;
 
-left:8%;
-
-box-shadow:
-
-0 0 8px #00FF88,
-
-0 0 18px #00FF88,
-
-0 0 35px rgba(0,255,136,.95);
-
-animation:dotOne 13s ease-in-out infinite;
-
-pointer-events:none;
-
-z-index:0;
-
+  z-index: 0;
 }
 
-.why-section::after{
+.why-section::after {
+  content: "";
 
-content:"";
+  position: absolute;
 
-position:absolute;
+  width: 600px;
+  height: 600px;
 
-width:10px;
+  right: -340px;
+  bottom: -330px;
 
-height:10px;
+  border-radius: 50%;
 
-border-radius:50%;
+  background: radial-gradient(
+    circle,
+    rgba(108, 116, 48, 0.075),
+    transparent 70%
+  );
 
-background:#00FF88;
+  filter: blur(70px);
 
-top:48%;
+  pointer-events: none;
 
-right:9%;
-
-box-shadow:
-
-0 0 8px #00FF88,
-
-0 0 18px #00FF88,
-
-0 0 35px rgba(0,255,136,.95);
-
-animation:dotTwo 16s ease-in-out infinite;
-
-pointer-events:none;
-
-z-index:0;
-
+  z-index: 0;
 }
 
-.why-grid{
+/* ==========================================
+   Main Layout
+========================================== */
 
-position:relative;
+.why-grid {
+  position: relative;
+  z-index: 2;
 
-z-index:2;
+  max-width: 1400px;
+  margin: auto;
 
-max-width:1400px;
+  display: grid;
 
-margin:auto;
+  grid-template-columns: 0.9fr 1.1fr;
 
-display:grid;
+  gap: 100px;
 
-grid-template-columns:.9fr 1.1fr;
-
-gap:90px;
-
-align-items:start;
-
-}
-
-/* Third Dot */
-
-.why-grid::before{
-
-content:"";
-
-position:absolute;
-
-width:14px;
-
-height:14px;
-
-border-radius:50%;
-
-background:#00FF88;
-
-left:60%;
-
-bottom:12%;
-
-box-shadow:
-
-0 0 8px #00FF88,
-
-0 0 18px #00FF88,
-
-0 0 35px rgba(0,255,136,.95);
-
-animation:dotThree 18s ease-in-out infinite;
-
-pointer-events:none;
-
-z-index:-1;
-
+  align-items: start;
 }
 
 /* ==========================================
    Left Side
 ========================================== */
 
-.why-left{
+.why-left {
+  position: sticky;
 
-position:sticky;
-
-top:120px;
-
+  top: 120px;
 }
 
-.why-badge{
+.why-badge {
+  display: inline-flex;
 
-display:inline-flex;
+  align-items: center;
+  justify-content: center;
 
-align-items:center;
+  padding: 11px 28px;
 
-justify-content:center;
+  border-radius: 999px;
 
-padding:12px 28px;
+  background: rgba(116, 126, 54, 0.06);
 
-border-radius:40px;
+  border: 1px solid rgba(151, 157, 79, 0.24);
 
-background:rgba(0,255,136,.05);
+  color: #B9BE78;
 
-border:1px solid rgba(0,255,136,.18);
+  font-size: 12px;
+  font-weight: 700;
 
-color:#D4AF37;
+  letter-spacing: 3px;
 
-font-size:13px;
+  margin-bottom: 30px;
 
-font-weight:700;
-
-letter-spacing:3px;
-
-margin-bottom:28px;
-
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
 }
 
-.why-left h2{
+.why-left h2 {
+  max-width: 650px;
 
-font-size:66px;
+  margin: 0 0 26px;
 
-font-weight:800;
+  color: #F5F3ED;
 
-line-height:1.15;
+  font-size: 66px;
 
-color:#ffffff;
+  font-weight: 800;
 
-margin-bottom:24px;
+  line-height: 1.1;
 
+  letter-spacing: -1.8px;
 }
+
 /* ==========================================
    Vertex Highlight
 ========================================== */
 
-.vertex-highlight{
+.vertex-highlight {
+  background:
+    linear-gradient(
+      135deg,
+      #D9DBB0 0%,
+      #AEB66A 48%,
+      #8D954E 100%
+    );
 
-background:linear-gradient(
+  -webkit-background-clip: text;
+  background-clip: text;
 
-135deg,
+  -webkit-text-fill-color: transparent;
 
-#00FF88 0%,
-
-#49FFAE 45%,
-
-#D4AF37 100%
-
-);
-
--webkit-background-clip:text;
-
-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-text-shadow:
-
-0 0 12px rgba(0,255,136,.18),
-
-0 0 24px rgba(0,255,136,.10);
-
+  text-shadow:
+    0 0 20px rgba(145, 153, 67, 0.10);
 }
 
-.why-left p{
+.why-left p {
+  max-width: 560px;
 
-max-width:540px;
+  margin: 0;
 
-font-size:18px;
+  color: #AAA99F;
 
-line-height:1.9;
+  font-size: 17px;
 
-color:#D6D6D6;
-
+  line-height: 1.9;
 }
 
 /* ==========================================
    Right Side
 ========================================== */
 
-.why-right{
+.why-right {
+  position: relative;
 
-display:flex;
+  z-index: 2;
 
-flex-direction:column;
+  display: flex;
 
-gap:22px;
+  flex-direction: column;
 
-position:relative;
-
-z-index:2;
-
+  gap: 18px;
 }
 
 /* ==========================================
    Premium Cards
 ========================================== */
 
-.why-card{
+.why-card {
+  position: relative;
 
-position:relative;
+  overflow: hidden;
 
-overflow:hidden;
+  padding: 28px 31px;
 
-border-radius:28px;
+  border-radius: 24px;
 
-padding:30px 34px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(25, 26, 21, 0.96),
+      rgba(10, 10, 9, 0.99)
+    );
 
-background:
+  border: 1px solid rgba(175, 178, 135, 0.11);
 
-linear-gradient(
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.035),
+    0 18px 45px rgba(0, 0, 0, 0.42);
 
-145deg,
+  cursor: pointer;
 
-rgba(18,18,18,.96),
-
-rgba(8,8,8,.98)
-
-);
-
-border:1px solid rgba(0,255,136,.12);
-
-backdrop-filter:blur(22px);
-
--webkit-backdrop-filter:blur(22px);
-
-cursor:pointer;
-
-transition:
-
-transform .45s ease,
-
-border-color .45s ease,
-
-box-shadow .45s ease,
-
-background .45s ease;
-
-box-shadow:
-
-0 20px 50px rgba(0,0,0,.45);
-
+  transition:
+    transform 0.45s cubic-bezier(.22, 1, .36, 1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
 }
 
-/* Premium Glow */
+/* ==========================================
+   Olive Light
+========================================== */
 
-.why-card::before{
+.why-card::before {
+  content: "";
 
-content:"";
+  position: absolute;
 
-position:absolute;
+  inset: 0;
 
-inset:0;
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(133, 143, 57, 0.13),
+      transparent 50%
+    );
 
-background:
+  opacity: 0;
 
-radial-gradient(
+  transition: opacity 0.45s ease;
 
-circle at top left,
-
-rgba(0,255,136,.12),
-
-rgba(212,175,55,.08),
-
-transparent 72%
-
-);
-
-opacity:0;
-
-transition:.45s;
-
-pointer-events:none;
-
+  pointer-events: none;
 }
 
 .why-card:hover::before,
-
-.why-card.active::before{
-
-opacity:1;
-
+.why-card.active::before {
+  opacity: 1;
 }
 
-.why-card:hover,
-
-.why-card.active{
-
-transform:translateY(-8px);
-
-border-color:rgba(212,175,55,.25);
-
-box-shadow:
-
-0 28px 65px rgba(0,0,0,.60),
-
-0 0 18px rgba(0,255,136,.16),
-
-0 0 32px rgba(212,175,55,.12);
-
-}
 /* ==========================================
    Card Header
 ========================================== */
 
-.why-card-top{
+.why-card-top {
+  position: relative;
 
-display:flex;
+  z-index: 2;
 
-align-items:center;
+  display: flex;
 
-justify-content:space-between;
+  align-items: center;
 
-gap:20px;
+  justify-content: space-between;
 
-position:relative;
-
-z-index:2;
-
+  gap: 24px;
 }
 
-.why-card-top h3{
+.why-card-top h3 {
+  margin: 0;
 
-font-size:29px;
+  color: #EEEDE7;
 
-font-weight:700;
+  font-size: 25px;
 
-color:#ffffff;
+  font-weight: 700;
 
-transition:.4s ease;
+  line-height: 1.35;
 
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
 }
 
 .why-card:hover .why-card-top h3,
+.why-card.active .why-card-top h3 {
+  color: #F4F2E7;
 
-.why-card.active .why-card-top h3{
-
-color:#F7E7A4;
-
-text-shadow:
-
-0 0 10px rgba(212,175,55,.20),
-
-0 0 20px rgba(0,255,136,.12);
-
+  transform: translateX(3px);
 }
 
 /* ==========================================
-   Premium Icon
+   Premium Olive Icon
 ========================================== */
 
-.why-icon{
+.why-icon {
+  position: relative;
 
-width:54px;
+  width: 52px;
+  height: 52px;
 
-height:54px;
+  flex-shrink: 0;
 
-display:flex;
+  display: flex;
 
-align-items:center;
+  align-items: center;
+  justify-content: center;
 
-justify-content:center;
+  border-radius: 50%;
 
-flex-shrink:0;
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      rgba(181, 188, 102, 0.20),
+      rgba(113, 121, 49, 0.075) 55%,
+      rgba(8, 8, 7, 0.78)
+    );
 
-border-radius:50%;
+  border: 1px solid rgba(157, 164, 79, 0.30);
 
-background:rgba(0,255,136,.08);
+  color: #B7BF70;
 
-border:1px solid rgba(0,255,136,.20);
+  font-size: 25px;
 
-color:#00FF88;
+  font-weight: 400;
 
-font-size:28px;
+  box-shadow:
+    0 0 0 5px rgba(128, 137, 61, 0.025),
+    inset 0 0 18px rgba(128, 137, 61, 0.09);
 
-font-weight:700;
-
-transition:all .45s cubic-bezier(.22,1,.36,1);
-
+  transition:
+    transform 0.5s cubic-bezier(.22, 1, .36, 1),
+    background 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-.why-card.active .why-icon{
+/* Inner Ring */
 
-background:
+.why-icon::before {
+  content: "";
 
-linear-gradient(
+  position: absolute;
 
-135deg,
+  inset: 7px;
 
-#00FF88,
+  border-radius: 50%;
 
-#D4AF37
+  border: 1px solid rgba(176, 183, 101, 0.17);
 
-);
+  transition: 0.45s ease;
+}
 
-color:#050505;
+/* Tiny Champagne Accent */
 
-border-color:#D4AF37;
+.why-icon::after {
+  content: "";
 
-transform:rotate(180deg);
+  position: absolute;
 
-box-shadow:
+  width: 4px;
+  height: 4px;
 
-0 0 18px rgba(0,255,136,.25),
+  top: 6px;
+  right: 13px;
 
-0 0 34px rgba(212,175,55,.16);
+  border-radius: 50%;
 
+  background: #D4AF37;
+
+  box-shadow:
+    0 0 7px rgba(212, 175, 55, 0.40);
+
+  opacity: 0.65;
+}
+
+.why-card.active .why-icon {
+  color: #D0D59A;
+
+  border-color: rgba(175, 184, 91, 0.48);
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      rgba(191, 198, 112, 0.25),
+      rgba(118, 128, 49, 0.11) 55%,
+      rgba(8, 8, 7, 0.82)
+    );
+
+  transform: rotate(180deg);
+
+  box-shadow:
+    0 0 0 6px rgba(128, 137, 61, 0.035),
+    inset 0 0 24px rgba(128, 137, 61, 0.13),
+    0 0 25px rgba(128, 137, 61, 0.11);
+}
+
+.why-card.active .why-icon::before {
+  inset: 5px;
+
+  border-color: rgba(180, 188, 99, 0.28);
 }
 
 /* ==========================================
-   Apple Smooth Accordion
+   Accordion Content
 ========================================== */
 
-.why-content{
+.why-content {
+  position: relative;
 
-display:grid;
+  z-index: 2;
 
-grid-template-rows:0fr;
+  display: grid;
 
-opacity:0;
+  grid-template-rows: 0fr;
 
-margin-top:0;
+  opacity: 0;
 
-transition:
+  margin-top: 0;
 
-grid-template-rows .55s cubic-bezier(.22,1,.36,1),
-
-opacity .35s ease,
-
-margin-top .35s ease;
-
+  transition:
+    grid-template-rows 0.55s cubic-bezier(.22, 1, .36, 1),
+    opacity 0.35s ease,
+    margin-top 0.35s ease;
 }
 
-.why-content.open{
+.why-content.open {
+  grid-template-rows: 1fr;
 
-grid-template-rows:1fr;
+  opacity: 1;
 
-opacity:1;
-
-margin-top:18px;
-
+  margin-top: 17px;
 }
 
-.why-content p{
+.why-content p {
+  overflow: hidden;
 
-overflow:hidden;
+  margin: 0;
 
-font-size:17px;
+  color: #AAA99F;
 
-line-height:1.9;
+  font-size: 16px;
 
-color:#D8D8D8;
+  line-height: 1.85;
 
-transform:translateY(-12px);
+  transform: translateY(-10px);
 
-transition:transform .55s cubic-bezier(.22,1,.36,1);
-
+  transition:
+    transform 0.55s cubic-bezier(.22, 1, .36, 1);
 }
 
-.why-content.open p{
-
-transform:translateY(0);
-
-}
-/* ==========================================
-   Active Luxury Effect
-========================================== */
-
-.why-card.active{
-
-background:
-
-linear-gradient(
-
-145deg,
-
-rgba(22,22,22,.98),
-
-rgba(8,8,8,.98)
-
-);
-
-border:1px solid rgba(212,175,55,.28);
-
-box-shadow:
-
-0 25px 70px rgba(0,0,0,.65),
-
-0 0 22px rgba(0,255,136,.18),
-
-0 0 42px rgba(212,175,55,.14);
-
-}
-
-/* Left Premium Line */
-
-.why-card.active::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-top:0;
-
-width:4px;
-
-height:100%;
-
-background:
-
-linear-gradient(
-
-180deg,
-
-#00FF88,
-
-#D4AF37
-
-);
-
-border-radius:20px;
-
+.why-content.open p {
+  transform: translateY(0);
 }
 
 /* ==========================================
-   Premium Hover Shine
+   Active Card
 ========================================== */
 
-.why-card .shine{
+.why-card.active {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(43, 45, 31, 0.96),
+      rgba(12, 12, 10, 0.99)
+    );
 
-position:absolute;
+  border-color: rgba(165, 171, 91, 0.30);
 
-top:-130%;
-
-left:-45%;
-
-width:55%;
-
-height:260%;
-
-background:
-
-linear-gradient(
-
-90deg,
-
-transparent,
-
-rgba(255,255,255,.06),
-
-rgba(0,255,136,.08),
-
-rgba(212,175,55,.08),
-
-transparent
-
-);
-
-transform:rotate(24deg);
-
-transition:1.2s;
-
-pointer-events:none;
-
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 25px 65px rgba(0, 0, 0, 0.58),
+    0 0 26px rgba(119, 127, 50, 0.08);
 }
 
-.why-card:hover .shine{
+/* Active Olive Line */
 
-left:150%;
+.why-card.active::after {
+  content: "";
 
+  position: absolute;
+
+  left: 0;
+
+  top: 16px;
+
+  width: 3px;
+
+  height: calc(100% - 32px);
+
+  border-radius: 0 10px 10px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #8E984D,
+      #B3B96C,
+      transparent
+    );
+
+  box-shadow:
+    0 0 12px rgba(142, 152, 77, 0.30);
+
+  pointer-events: none;
 }
 
 /* ==========================================
-   Premium Floating Animation
+   Premium Shine
 ========================================== */
 
-.why-card{
+.why-card .shine {
+  position: absolute;
 
-animation:cardReveal .8s ease both;
+  top: -140%;
 
+  left: -55%;
+
+  width: 45%;
+
+  height: 280%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.025),
+      rgba(180, 187, 102, 0.055),
+      rgba(212, 175, 55, 0.025),
+      transparent
+    );
+
+  transform: rotate(24deg);
+
+  transition: 1.15s ease;
+
+  pointer-events: none;
 }
 
-.why-card:nth-child(2){
-
-animation-delay:.12s;
-
-}
-
-.why-card:nth-child(3){
-
-animation-delay:.24s;
-
-}
-
-.why-card:nth-child(4){
-
-animation-delay:.36s;
-
-}
-
-@keyframes cardReveal{
-
-from{
-
-opacity:0;
-
-transform:translateY(55px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
+.why-card:hover .shine {
+  left: 155%;
 }
 
 /* ==========================================
-   Active Glow Pulse
+   Hover
 ========================================== */
 
-.why-card.active{
+.why-card:hover {
+  transform: translateY(-6px);
 
-animation:
+  border-color: rgba(158, 166, 81, 0.25);
 
-premiumPulse 3.5s ease-in-out infinite;
-
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 25px 60px rgba(0, 0, 0, 0.50),
+    0 0 25px rgba(121, 130, 51, 0.065);
 }
 
-@keyframes premiumPulse{
+.why-card:hover .why-icon {
+  border-color: rgba(170, 179, 88, 0.40);
 
-0%,100%{
-
-box-shadow:
-
-0 25px 70px rgba(0,0,0,.60),
-
-0 0 18px rgba(0,255,136,.18),
-
-0 0 30px rgba(212,175,55,.12);
-
+  box-shadow:
+    0 0 0 6px rgba(128, 137, 61, 0.03),
+    inset 0 0 22px rgba(128, 137, 61, 0.12),
+    0 0 22px rgba(128, 137, 61, 0.08);
 }
 
-50%{
-
-box-shadow:
-
-0 30px 80px rgba(0,0,0,.70),
-
-0 0 30px rgba(0,255,136,.28),
-
-0 0 50px rgba(212,175,55,.20);
-
+.why-card:hover .why-icon::before {
+  border-color: rgba(180, 188, 99, 0.26);
 }
 
-}
 /* ==========================================
-   Premium Neon Green Dots
+   Reveal
 ========================================== */
 
-@keyframes dotOne{
-
-0%{
-
-transform:translate(0,0) scale(1);
-
-opacity:.70;
-
+.why-card {
+  animation: whyCardReveal 0.75s ease both;
 }
 
-25%{
-
-transform:translate(18px,-15px) scale(1.08);
-
-opacity:1;
-
+.why-card:nth-child(2) {
+  animation-delay: 0.10s;
 }
 
-50%{
-
-transform:translate(8px,18px) scale(.95);
-
-opacity:.75;
-
+.why-card:nth-child(3) {
+  animation-delay: 0.20s;
 }
 
-75%{
-
-transform:translate(-15px,-10px) scale(1.05);
-
-opacity:1;
-
+.why-card:nth-child(4) {
+  animation-delay: 0.30s;
 }
 
-100%{
+@keyframes whyCardReveal {
+  from {
+    opacity: 0;
 
-transform:translate(0,0) scale(1);
+    transform: translateY(35px);
+  }
 
-opacity:.70;
+  to {
+    opacity: 1;
 
-}
-
-}
-
-@keyframes dotTwo{
-
-0%{
-
-transform:translate(0,0);
-
-opacity:.65;
-
-}
-
-30%{
-
-transform:translate(-20px,16px);
-
-opacity:1;
-
-}
-
-60%{
-
-transform:translate(12px,-18px);
-
-opacity:.75;
-
-}
-
-100%{
-
-transform:translate(0,0);
-
-opacity:.65;
-
-}
-
-}
-
-@keyframes dotThree{
-
-0%{
-
-transform:translateY(0);
-
-opacity:.70;
-
-}
-
-50%{
-
-transform:translateY(-22px);
-
-opacity:1;
-
-}
-
-100%{
-
-transform:translateY(0);
-
-opacity:.70;
-
-}
-
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================
    Tablet
 ========================================== */
 
-@media(max-width:1100px){
+@media (max-width: 1100px) {
 
-.why-grid{
+  .why-grid {
+    grid-template-columns: 1fr;
 
-grid-template-columns:1fr;
+    gap: 65px;
+  }
 
-gap:60px;
+  .why-left {
+    position: relative;
 
-}
+    top: 0;
 
-.why-left{
+    text-align: center;
+  }
 
-position:relative;
+  .why-left h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-top:0;
-
-text-align:center;
-
-}
-
-.why-left p{
-
-margin:auto;
-
-max-width:700px;
-
-}
+  .why-left p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }
 
@@ -876,57 +658,46 @@ max-width:700px;
    Mobile
 ========================================== */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-.why-section{
+  .why-section {
+    padding: 100px 22px;
+  }
 
-padding:100px 22px;
+  .why-left h2 {
+    font-size: 44px;
 
-}
+    letter-spacing: -1px;
+  }
 
-.why-left h2{
+  .why-left p {
+    font-size: 16px;
 
-font-size:42px;
+    line-height: 1.8;
+  }
 
-}
+  .why-card {
+    padding: 23px;
 
-.why-left p{
+    border-radius: 21px;
+  }
 
-font-size:16px;
+  .why-card-top h3 {
+    font-size: 22px;
+  }
 
-line-height:1.8;
+  .why-icon {
+    width: 47px;
+    height: 47px;
 
-}
+    font-size: 23px;
+  }
 
-.why-card{
+  .why-content p {
+    font-size: 15px;
 
-padding:22px;
-
-border-radius:22px;
-
-}
-
-.why-card-top h3{
-
-font-size:23px;
-
-}
-
-.why-icon{
-
-width:46px;
-
-height:46px;
-
-font-size:24px;
-
-}
-
-.why-content p{
-
-font-size:15px;
-
-}
+    line-height: 1.8;
+  }
 
 }
 
@@ -934,53 +705,56 @@ font-size:15px;
    Small Phones
 ========================================== */
 
-@media(max-width:480px){
+@media (max-width: 480px) {
 
-.why-left h2{
+  .why-section {
+    padding: 90px 18px;
+  }
 
-font-size:34px;
+  .why-left h2 {
+    font-size: 35px;
+  }
 
-}
+  .why-left p {
+    font-size: 15px;
+  }
 
-.why-left p{
+  .why-badge {
+    padding: 10px 21px;
 
-font-size:15px;
+    font-size: 10px;
 
-}
+    letter-spacing: 2px;
+  }
 
-.why-badge{
+  .why-card {
+    padding: 19px;
 
-font-size:11px;
+    border-radius: 19px;
+  }
 
-padding:10px 22px;
+  .why-card-top {
+    gap: 14px;
+  }
 
-letter-spacing:2px;
+  .why-card-top h3 {
+    font-size: 19px;
+  }
 
-}
+  .why-icon {
+    width: 42px;
+    height: 42px;
 
-.why-card{
+    font-size: 20px;
+  }
 
-padding:18px;
+  .why-icon::before {
+    inset: 6px;
+  }
 
-border-radius:20px;
-
-}
-
-.why-card-top h3{
-
-font-size:20px;
-
-}
-
-.why-icon{
-
-width:40px;
-
-height:40px;
-
-font-size:20px;
-
-}
+  .why-content p {
+    font-size: 14px;
+  }
 
 }
 
@@ -988,30 +762,23 @@ font-size:20px;
    Reduced Motion
 ========================================== */
 
-@media(prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion: reduce) {
 
-.why-section::before,
+  .why-card,
+  .why-card::before,
+  .why-card::after,
+  .why-card .shine,
+  .why-icon,
+  .why-icon::before,
+  .why-content,
+  .why-content p {
+    animation: none;
 
-.why-section::after,
+    transition: none;
+  }
 
-.why-grid::before,
-
-.why-card,
-
-.why-card::before,
-
-.why-card::after{
-
-animation:none;
-
-transition:none;
-
-}
-
-.why-card:hover{
-
-transform:none;
-
-}
+  .why-card:hover {
+    transform: none;
+  }
 
 }
