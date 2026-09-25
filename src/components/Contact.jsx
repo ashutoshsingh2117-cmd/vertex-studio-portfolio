@@ -149,7 +149,8 @@ function Contact() {
 
           </div>
         </div>
-{/* Right Side */}
+
+        {/* Right Side */}
 
         <motion.form
           ref={form}
@@ -251,7 +252,8 @@ function Contact() {
               </option>
             </select>
           </div>
-<input
+
+          <input
             type="text"
             name="budget"
             placeholder="Your Budget (Optional)"
@@ -268,10 +270,34 @@ function Contact() {
             required
           ></textarea>
 
-          <p className="privacy-text">
-            🔒 Your information is completely secure and confidential. We never
-            share your personal details with anyone.
-          </p>
+          {/* Privacy Notice & Consent */}
+
+          <div className="privacy-consent">
+            <label className="consent-label">
+              <input
+                type="checkbox"
+                required
+                aria-describedby="privacy-notice"
+              />
+
+              <span className="consent-check"></span>
+
+              <span
+                className="consent-content"
+                id="privacy-notice"
+              >
+                I understand that Vertex Studio will use the information I
+                provide to respond to my enquiry and provide relevant
+                information about its services. My information may be processed
+                through service providers used to operate this contact form.
+                Please read our{" "}
+                <a href="/privacy-policy">
+                  Privacy Policy
+                </a>
+                .
+              </span>
+            </label>
+          </div>
 
           {success && (
             <p className="success-message">
